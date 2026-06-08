@@ -918,7 +918,8 @@
   </div>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/60122268470?text=Hi%20The%20Quiet%20Crumbs,%20I%20am%20interested%20in%20your%20sourdough%20focaccia!" 
+  <a id="whatsappFloat" 
+     href="https://wa.me/6012268470?text=Hi%20The%20Quiet%20Crumbs,%20I%20am%20interested%20in%20your%20sourdough%20focaccia!" 
      class="whatsapp-float" 
      target="_blank" 
      rel="noopener noreferrer" 
@@ -1215,10 +1216,21 @@
 
   <!-- ----------------------------------------------------
        JAVASCRIPT / INTERACTIVE CONTROLS
-       ---------------------------------------------------- -->
-  <script>
+       ---------------------------------------------------- -->  <script>
     document.addEventListener('DOMContentLoaded', () => {
       
+      // ----------------------------------------------------
+      // CONFIGURATION
+      // ----------------------------------------------------
+      // WhatsApp default numbers (numeric only, no '+')
+      const WHATSAPP_MY = "6012268470";
+      const WHATSAPP_SG = "6587995309";
+      
+      // Google Sheets Web App URL (or other POST endpoint)
+      // Paste your Web App URL here after publishing the Apps Script.
+      // If empty, the form will simulate a successful submission locally.
+      const FORM_ENDPOINT = "";
+
       // 1. Header scroll effect
       const header = document.getElementById('mainHeader');
       window.addEventListener('scroll', () => {
@@ -1311,24 +1323,100 @@
         // Trigger Loading state
         submitBtn.classList.add('loading');
 
-        // Simulate API post (1.5 seconds delay)
-        setTimeout(() => {
-          submitBtn.classList.remove('loading');
-          
-          // Clear inputs
-          form.reset();
+        const formData = {
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          phone: phoneInput.value.trim()
+        };
 
+        if (FORM_ENDPOINT) {
+          // Send to Google Sheets Web App
+          fetch(FORM_ENDPOINT, {
+            method: 'POST',
+            mode: 'no-cors', // Bypasses CORS redirect issues common with Apps Script Web Apps
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          })
+          .then(() => {
+            handleSuccess();
+          })
+          .catch(err => {
+            console.error("Submission failed:", err);
+            alert("Oops! There was an issue submitting your registration. Please order directly via WhatsApp!");
+            submitBtn.classList.remove('loading');
+          });
+        } else {
+          // Simulate local success if endpoint is empty
+          setTimeout(() => {
+            handleSuccess();
+          }, 1200);
+        }
+
+        function handleSuccess() {
+          submitBtn.classList.remove('loading');
+          form.reset();
+          
           // Show Toast Success Notification
           toast.classList.add('show');
-
-          // Hide Toast after 4 seconds
           setTimeout(() => {
             toast.classList.remove('show');
           }, 4000);
-
-        }, 1500);
+        }
       });
+
+      // 5. Dynamic WhatsApp Number Geolocation
+      const whatsappFloat = document.getElementById('whatsappFloat');
+      const whatsappText = encodeURIComponent("Hi The Quiet Crumbs, I am interested in your sourdough focaccia!");
+      let targetNumber = WHATSAPP_MY; // Default to MY
+
+      function updateWhatsAppLink(number) {
+        whatsappFloat.href = `https://wa.me/${number}?text=${whatsappText}`;
+      }
+
+      // Initialize with default
+      updateWhatsAppLink(targetNumber);
+
+      // Perform Geolocation lookup
+      // Try freeipapi.com first (highly reliable, no credentials required)
+      fetch('https://freeipapi.com/api/json')
+        .then(res => {
+          if (!res.ok) throw new Error();
+          return res.json();
+        })
+        .then(data => {
+          if (data && data.countryCode) {
+            handleCountryCode(data.countryCode);
+          }
+        })
+        .catch(() => {
+          // Fallback to ipapi.co
+          fetch('https://ipapi.co/json/')
+            .then(res => {
+              if (!res.ok) throw new Error();
+              return res.json();
+            })
+            .then(data => {
+              if (data && data.country_code) {
+                handleCountryCode(data.country_code);
+              }
+            })
+            .catch(err => {
+              console.warn("Geolocation lookup failed, using default Malaysia number.", err);
+            });
+        });
+
+      function handleCountryCode(countryCode) {
+        if (countryCode === 'SG') {
+          targetNumber = WHATSAPP_SG;
+        } else {
+          targetNumber = WHATSAPP_MY;
+        }
+        updateWhatsAppLink(targetNumber);
+      }
     });
   </script>
+
 </body>
 </html>
