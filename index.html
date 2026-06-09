@@ -237,10 +237,14 @@
       width: auto;
       object-fit: contain;
       transition: var(--transition-normal);
+      margin-top: -55px; /* Negative margin to crop transparent whitespace from PNG */
+      margin-bottom: -55px;
     }
 
     header.scrolled .logo img {
       height: 170px; /* Increased by 5x from 34px */
+      margin-top: -45px;
+      margin-bottom: -45px;
     }
 
     .nav-social {
