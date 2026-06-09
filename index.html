@@ -149,18 +149,41 @@
        ---------------------------------------------------- */
     /* Announcement Bar styling */
     .announcement-bar {
-      background-color: var(--color-gold);
+      background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-hover) 50%, var(--color-brown-medium) 100%);
       color: var(--color-white);
       text-align: center;
-      padding: 8px 24px;
-      font-size: 0.75rem;
+      padding: 10px 24px;
+      font-size: 0.85rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
+      box-shadow: 0 2px 10px rgba(42, 27, 20, 0.15);
       transition: max-height var(--transition-normal), padding var(--transition-normal), opacity var(--transition-normal);
       overflow: hidden;
-      max-height: 40px;
+      max-height: 50px;
       opacity: 1;
+      position: relative;
+    }
+
+    .announcement-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 100%);
+      transform: skewX(-30deg);
+      animation: shineBar 5s infinite ease-in-out;
+    }
+
+    @keyframes shineBar {
+      0% {
+        left: -50%;
+      }
+      30%, 100% {
+        left: 150%;
+      }
     }
 
     header.scrolled .announcement-bar {
