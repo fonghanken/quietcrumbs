@@ -634,22 +634,33 @@
     /* Flavour Checkbox Grid */
     .flavour-checkbox-grid {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 8px;
       margin-top: 8px;
     }
 
     .flavour-check-card {
       display: flex;
+      flex-direction: row;
       align-items: center;
-      gap: 12px;
-      padding: 8px 14px;
+      gap: 8px; /* Tighter gap to save space */
+      padding: 10px 12px;
       border: 1.5px solid rgba(42, 27, 20, 0.12);
       border-radius: var(--radius-sm);
       background-color: var(--color-cream);
       cursor: pointer;
       transition: var(--transition-fast);
       user-select: none;
+      flex: 0 0 calc(50% - 4px); /* Shorten card lengths to half */
+      box-sizing: border-box;
+      text-align: left;
+      flex-wrap: nowrap; /* Prevent horizontal items from wrapping vertically */
+    }
+
+    @media (max-width: 480px) {
+      .flavour-check-card {
+        flex: 0 0 100%; /* Full width stack on mobile */
+      }
     }
 
     .flavour-check-card:hover {
@@ -658,8 +669,7 @@
     }
 
     .flavour-check-card input[type="checkbox"] {
-      display: none;
-      /* Hide standard checkbox */
+      display: none; /* Hide standard checkbox */
     }
 
     .custom-check {
@@ -676,7 +686,7 @@
       flex-shrink: 0;
     }
 
-    .flavour-check-card input[type="checkbox"]:checked+.custom-check {
+    .flavour-check-card input[type="checkbox"]:checked + .custom-check {
       border-color: var(--color-gold);
       background-color: var(--color-gold);
     }
@@ -694,7 +704,7 @@
       left: 4px;
     }
 
-    .flavour-check-card input[type="checkbox"]:checked+.custom-check::after {
+    .flavour-check-card input[type="checkbox"]:checked + .custom-check::after {
       transform: rotate(45deg) scale(1);
     }
 
@@ -708,14 +718,17 @@
     }
 
     .check-label {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--color-text);
       transition: var(--transition-fast);
       line-height: 1.2;
+      text-align: left;
+      flex-shrink: 1;
+      white-space: normal; /* Text can wrap inside its block if needed, but the block stays inline */
     }
 
-    .flavour-check-card input[type="checkbox"]:checked~.check-label {
+    .flavour-check-card input[type="checkbox"]:checked ~ .check-label {
       color: var(--color-brown-dark);
       font-weight: 600;
     }
