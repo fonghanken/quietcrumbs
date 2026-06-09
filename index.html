@@ -234,6 +234,8 @@
 
     .logo span {
       margin-left: -18px; /* Negative margin to pull brand text closer, overlapping PNG whitespace */
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 3px rgba(255, 255, 255, 0.6);
+      transition: text-shadow var(--transition-normal);
     }
 
     .logo img {
@@ -249,6 +251,10 @@
       height: 170px; /* Increased by 5x from 34px */
       margin-top: -38px;
       margin-bottom: -38px;
+    }
+
+    header.scrolled .logo span {
+      text-shadow: none; /* Remove glow on scrolled light background */
     }
 
     .nav-social {
