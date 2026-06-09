@@ -225,17 +225,22 @@
     .logo {
       display: flex;
       align-items: center;
+      gap: 10px;
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-brown-dark);
     }
 
     .logo img {
-      height: 44px;
+      height: 176px; /* Increased by 4x from 44px */
       width: auto;
       object-fit: contain;
       transition: var(--transition-normal);
     }
 
     header.scrolled .logo img {
-      height: 36px;
+      height: 144px; /* Increased by 4x from 36px */
     }
 
     .nav-social {
@@ -1117,6 +1122,7 @@
     <div class="container nav-wrapper">
       <a href="#" class="logo" aria-label="The Quiet Crumbs Home">
         <img src="assets/thequietcrumbs_logo.png" alt="The Quiet Crumbs">
+        <span>the quiet crumbs</span>
       </a>
       <div class="nav-social">
         <a href="https://www.instagram.com/thequietcrumbs/" class="btn-instagram-nav" target="_blank"
