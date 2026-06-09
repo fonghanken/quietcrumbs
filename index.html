@@ -147,6 +147,52 @@
     /* ----------------------------------------------------
        HEADER / NAVIGATION
        ---------------------------------------------------- */
+    /* Announcement Bar styling */
+    .announcement-bar {
+      background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-hover) 50%, var(--color-brown-medium) 100%);
+      color: var(--color-white);
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: 0 2px 10px rgba(42, 27, 20, 0.15);
+      transition: max-height var(--transition-normal), padding var(--transition-normal), opacity var(--transition-normal);
+      overflow: hidden;
+      max-height: 50px;
+      opacity: 1;
+      position: relative;
+    }
+
+    .announcement-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 100%);
+      transform: skewX(-30deg);
+      animation: shineBar 5s infinite ease-in-out;
+    }
+
+    @keyframes shineBar {
+      0% {
+        left: -50%;
+      }
+      30%, 100% {
+        left: 150%;
+      }
+    }
+
+    header.scrolled .announcement-bar {
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      opacity: 0;
+    }
+
     header {
       position: fixed;
       top: 0;
@@ -154,11 +200,9 @@
       width: 100%;
       z-index: 1000;
       transition: var(--transition-normal);
-      padding: 24px 0;
     }
 
     header.scrolled {
-      padding: 16px 0;
       background: var(--glass-bg);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -170,6 +214,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 24px 0;
+      transition: var(--transition-normal);
+    }
+
+    header.scrolled .nav-wrapper {
+      padding: 16px 0;
     }
 
     .logo {
@@ -634,22 +684,33 @@
     /* Flavour Checkbox Grid */
     .flavour-checkbox-grid {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 8px;
       margin-top: 8px;
     }
 
     .flavour-check-card {
       display: flex;
+      flex-direction: row;
       align-items: center;
-      gap: 12px;
-      padding: 8px 14px;
+      gap: 8px; /* Tighter gap to save space */
+      padding: 10px 12px;
       border: 1.5px solid rgba(42, 27, 20, 0.12);
       border-radius: var(--radius-sm);
       background-color: var(--color-cream);
       cursor: pointer;
       transition: var(--transition-fast);
       user-select: none;
+      flex: 0 0 calc(50% - 4px); /* Shorten card lengths to half */
+      box-sizing: border-box;
+      text-align: left;
+      flex-wrap: nowrap; /* Prevent horizontal items from wrapping vertically */
+    }
+
+    @media (max-width: 480px) {
+      .flavour-check-card {
+        flex: 0 0 100%; /* Full width stack on mobile */
+      }
     }
 
     .flavour-check-card:hover {
@@ -658,8 +719,7 @@
     }
 
     .flavour-check-card input[type="checkbox"] {
-      display: none;
-      /* Hide standard checkbox */
+      display: none; /* Hide standard checkbox */
     }
 
     .custom-check {
@@ -676,7 +736,7 @@
       flex-shrink: 0;
     }
 
-    .flavour-check-card input[type="checkbox"]:checked+.custom-check {
+    .flavour-check-card input[type="checkbox"]:checked + .custom-check {
       border-color: var(--color-gold);
       background-color: var(--color-gold);
     }
@@ -694,7 +754,7 @@
       left: 4px;
     }
 
-    .flavour-check-card input[type="checkbox"]:checked+.custom-check::after {
+    .flavour-check-card input[type="checkbox"]:checked + .custom-check::after {
       transform: rotate(45deg) scale(1);
     }
 
@@ -708,14 +768,17 @@
     }
 
     .check-label {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--color-text);
       transition: var(--transition-fast);
       line-height: 1.2;
+      text-align: left;
+      flex-shrink: 1;
+      white-space: normal; /* Text can wrap inside its block if needed, but the block stays inline */
     }
 
-    .flavour-check-card input[type="checkbox"]:checked~.check-label {
+    .flavour-check-card input[type="checkbox"]:checked ~ .check-label {
       color: var(--color-brown-dark);
       font-weight: 600;
     }
@@ -1048,6 +1111,9 @@
 
   <!-- HEADER -->
   <header id="mainHeader">
+    <div class="announcement-bar">
+      <span>🎉 Launching in Damansara! Pre-Orders Now Open for Our Next Batch!</span>
+    </div>
     <div class="container nav-wrapper">
       <a href="#" class="logo" aria-label="The Quiet Crumbs Home">
         <!-- SVG Wheat Icon -->
@@ -1075,8 +1141,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>Artisanal Sourdough, Baked with Patience and Love</h1>
-        <p>A home-baking passion celebrating the rustic beauty of wild-fermented loaves and oil-drenched focaccia.
-          Naturally slow-fermented over 36 hours for a distinct, caramelized crust and soft, airy crumb.</p>
+        <p>Celebrating our launch in Damansara. Enjoy rustic, wild-fermented sourdough loaves and olive oil-rich gourmet focaccias, naturally slow-fermented over 36 hours for a perfect caramelized crust and airy crumb.</p>
         <a href="#register" class="hero-cta">
           <span>Reserve Next Batch</span>
           <!-- SVG Arrow Down Icon -->
@@ -1240,10 +1305,8 @@
 
         <!-- Left Side Information -->
         <div class="interest-info">
-          <h2>Join the Batch List</h2>
-          <p>Because we ferment our dough for 36 hours and bake in micro-batches, demand often exceeds supply. Register
-            your interest below to receive priority access to our weekly bake schedules and exclusive new flavor
-            releases.</p>
+          <h2>Launching in Damansara!</h2>
+          <p>To celebrate our new launch in Damansara, we are baking exclusive micro-batches for local pickup and delivery. Secure your place on our launch list below to get priority access to weekly baking slots and fresh-out-of-the-oven updates.</p>
           <ul class="interest-info-list">
             <li>
               <!-- Check icon -->
