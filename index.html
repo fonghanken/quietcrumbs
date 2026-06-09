@@ -214,18 +214,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 4px 0; /* Minimal vertical padding */
+      padding: 12px 0; /* Clean header margin for the logo */
       transition: var(--transition-normal);
     }
 
     header.scrolled .nav-wrapper {
-      padding: 2px 0; /* Extra tight vertical padding on scroll */
+      padding: 8px 0; /* Clean scroll header margin */
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 6px; /* Nearer to the logo */
       font-family: var(--font-serif);
       font-size: 1.4rem;
       font-weight: 700;
@@ -233,18 +233,14 @@
     }
 
     .logo img {
-      height: 176px; /* Increased by 4x from 44px */
+      height: 44px; /* Balanced standard SVG height */
       width: auto;
       object-fit: contain;
       transition: var(--transition-normal);
-      margin-top: -45px; /* Negative margin to crop transparent space from PNG */
-      margin-bottom: -45px;
     }
 
     header.scrolled .logo img {
-      height: 144px; /* Increased by 4x from 36px */
-      margin-top: -38px;
-      margin-bottom: -38px;
+      height: 34px;
     }
 
     .nav-social {
@@ -992,7 +988,7 @@
     footer {
       background-color: var(--color-brown-dark);
       color: rgba(255, 255, 255, 0.7);
-      padding: 30px 0;
+      padding: 40px 0; /* Restored clean margin for the footer */
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -1125,7 +1121,7 @@
     </div>
     <div class="container nav-wrapper">
       <a href="#" class="logo" aria-label="The Quiet Crumbs Home">
-        <img src="assets/thequietcrumbs_logo.png" alt="The Quiet Crumbs">
+        <img src="assets/thequietcrumbs_logo.svg" alt="The Quiet Crumbs">
         <span>the quiet crumbs</span>
       </a>
       <div class="nav-social">
