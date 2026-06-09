@@ -214,18 +214,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 4px 0; /* Minimal vertical padding */
+      padding: 8px 0; /* Increased header padding */
       transition: var(--transition-normal);
     }
 
     header.scrolled .nav-wrapper {
-      padding: 2px 0; /* Slightly tighter on scroll */
+      padding: 4px 0; /* Increased scrolled padding */
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 3px; /* Moved brand name closer to logo */
+      gap: 0px; /* Moved brand name text directly next to logo image */
       font-family: var(--font-serif);
       font-size: 1.4rem;
       font-weight: 700;
@@ -237,14 +237,14 @@
       width: auto;
       object-fit: contain;
       transition: var(--transition-normal);
-      margin-top: -50px; /* Adjusted negative margin to increase layout margin slightly */
-      margin-bottom: -50px;
+      margin-top: -45px; /* Decreased negative margins to increase visual margins */
+      margin-bottom: -45px;
     }
 
     header.scrolled .logo img {
       height: 170px; /* Increased by 5x from 34px */
-      margin-top: -42px;
-      margin-bottom: -42px;
+      margin-top: -38px;
+      margin-bottom: -38px;
     }
 
     .nav-social {
@@ -992,7 +992,7 @@
     footer {
       background-color: var(--color-brown-dark);
       color: rgba(255, 255, 255, 0.7);
-      padding: 20px 0; /* Slightly increased minimal footer padding */
+      padding: 30px 0; /* Increased footer padding */
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
