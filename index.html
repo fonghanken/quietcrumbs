@@ -214,12 +214,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 24px 0;
+      padding: 4px 0; /* Minimal vertical padding */
       transition: var(--transition-normal);
     }
 
     header.scrolled .nav-wrapper {
-      padding: 16px 0;
+      padding: 2px 0; /* Extra tight vertical padding on scroll */
     }
 
     .logo {
@@ -237,10 +237,14 @@
       width: auto;
       object-fit: contain;
       transition: var(--transition-normal);
+      margin-top: -45px; /* Negative margin to crop transparent space from PNG */
+      margin-bottom: -45px;
     }
 
     header.scrolled .logo img {
       height: 144px; /* Increased by 4x from 36px */
+      margin-top: -38px;
+      margin-bottom: -38px;
     }
 
     .nav-social {
@@ -988,7 +992,7 @@
     footer {
       background-color: var(--color-brown-dark);
       color: rgba(255, 255, 255, 0.7);
-      padding: 60px 0;
+      padding: 30px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
