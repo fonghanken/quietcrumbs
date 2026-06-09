@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Quiet Crumbs | Artisanal Sourdough & Gourmet Focaccia</title>
   <meta name="description"
-    content="Artisanal sourdough and gourmet focaccia, baked with patience, love, and a 36-hour slow fermentation process. Fresh from our home kitchen to your table.">
+    content="Artisanal sourdough and gourmet focaccia, baked with patience, love, and a 72-hour slow fermentation process. Fresh from our home kitchen to your table.">
 
   <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -225,17 +225,17 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--color-brown-dark);
     }
 
-    .logo svg {
-      width: 32px;
-      height: 32px;
-      fill: var(--color-gold);
+    .logo img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      transition: var(--transition-normal);
+    }
+
+    header.scrolled .logo img {
+      height: 36px;
     }
 
     .nav-social {
@@ -283,7 +283,7 @@
       min-height: 700px;
       display: flex;
       align-items: center;
-      background-image: linear-gradient(rgba(42, 27, 20, 0.5), rgba(42, 27, 20, 0.65)), url('hero_sourdough.png');
+      background-image: linear-gradient(rgba(42, 27, 20, 0.5), rgba(42, 27, 20, 0.65)), url('assets/hero_sourdough.png');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -1116,12 +1116,7 @@
     </div>
     <div class="container nav-wrapper">
       <a href="#" class="logo" aria-label="The Quiet Crumbs Home">
-        <!-- SVG Wheat Icon -->
-        <svg viewBox="0 0 512 512">
-          <path
-            d="M471.2 56.4c-22-22-54.6-25-80.1-9l-38.3 24c-12.7 8-28.7 8.3-41.7.9l-20-11.4c-9.1-5.2-20-5.2-29.2 0L241 73.6c-7.3 4.2-12.8 11.1-15.3 19.3l-10.9 35c-4 12.8-14 22.8-26.8 26.8L153 165.6c-8.2 2.6-15.1 8-19.3 15.3l-22.7 39.7c-5.2 9.1-5.2 20 0 29.2l11.4 20c7.4 13 7.1 29-.9 41.7l-24 38.3c-16 25.5-13 58.1 9 80.1 22 22 54.6 25 80.1 9l38.3-24c12.7-8 28.7-8.3 41.7-.9l20 11.4c9.1 5.2 20 5.2 29.2 0l20.9-12.7c7.3-4.2 12.8-11.1 15.3-19.3l10.9-35c4-12.8 14-22.8 26.8-26.8l35-10.9c8.2-2.6 15.1-8 19.3-15.3l22.7-39.7c5.2-9.1 5.2-20 0-29.2l-11.4-20c-7.4-13-7.1-29 .9-41.7l24-38.3c16.1-25.5 13-58.1-9-80.1zM288 384c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96z" />
-        </svg>
-        <span>the quiet crumbs</span>
+        <img src="assets/thequietcrumbs_logo.png" alt="The Quiet Crumbs">
       </a>
       <div class="nav-social">
         <a href="https://www.instagram.com/thequietcrumbs/" class="btn-instagram-nav" target="_blank"
@@ -1141,7 +1136,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>Artisanal Sourdough, Baked with Patience and Love</h1>
-        <p>Celebrating our launch in Damansara. Enjoy rustic, wild-fermented sourdough loaves and olive oil-rich gourmet focaccias, naturally slow-fermented over 36 hours for a perfect caramelized crust and airy crumb.</p>
+        <p>Celebrating our launch in Damansara. Enjoy rustic, wild-fermented sourdough loaves and olive oil-rich gourmet focaccias, naturally slow-fermented over 72 hours for a perfect caramelized crust and airy crumb.</p>
         <a href="#register" class="hero-cta">
           <span>Reserve Next Batch</span>
           <!-- SVG Arrow Down Icon -->
@@ -1164,7 +1159,7 @@
           <p>At <strong>The Quiet Crumbs</strong>, we believe that bread shouldn't be rushed. Born out of a deep passion
             for natural fermentation, every single loaf and focaccia starts with our active sourdough culture, wild
             yeast, and high-quality flour.</p>
-          <p>We ferment our dough slowly for up to 36 hours. This natural process breaks down gluten and yields a
+          <p>We ferment our dough slowly for up to 72 hours. This natural process breaks down gluten and yields a
             deeper, more complex flavor profile with that signature sourdough tang and caramelized crust. No industrial
             yeasts, no additives, no shortcuts.</p>
           <div class="about-highlight">
@@ -1173,7 +1168,7 @@
           </div>
           <div class="about-stats">
             <div class="stat-item">
-              <span class="stat-number">36h</span>
+              <span class="stat-number">72h</span>
               <span class="stat-label">Slow Fermentation</span>
             </div>
             <div class="stat-item">
@@ -1188,7 +1183,7 @@
         </div>
         <div class="about-image-container reveal">
           <div class="about-image-wrapper">
-            <img src="focaccia_showcase.png"
+            <img src="assets/focaccia_showcase.png"
               alt="Detail of freshly baked sourdough focaccia topped with tomatoes and rosemary" class="about-image">
           </div>
         </div>
@@ -1268,8 +1263,8 @@
             </svg>
           </div>
           <div class="product-card-body">
-            <h3>Chili Cheddar Crunch</h3>
-            <p>Sharp, aged cheddar cheese baked to a golden crispy lace edge, spiced with crushed red chili flakes for a
+            <h3>Chilli Cheddar Crunch</h3>
+            <p>Sharp, aged cheddar cheese baked to a golden crispy lace edge, spiced with crushed red chilli flakes for a
               delightful subtle kick.</p>
             <span class="product-tag">Bold & Crispy</span>
           </div>
@@ -1306,14 +1301,14 @@
         <!-- Left Side Information -->
         <div class="interest-info">
           <h2>Launching in Damansara!</h2>
-          <p>To celebrate our new launch in Damansara, we are baking exclusive micro-batches for local pickup and delivery. Secure your place on our launch list below to get priority access to weekly baking slots and fresh-out-of-the-oven updates.</p>
+          <p>To celebrate our new launch in Damansara, we are baking exclusive micro-batches for local pickup and delivery. Secure your place on our launch list below to get priority access to baking slots and fresh-out-of-the-oven updates.</p>
           <ul class="interest-info-list">
             <li>
               <!-- Check icon -->
               <svg viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
               </svg>
-              <span>Priority weekly pre-ordering</span>
+              <span>Priority pre-ordering</span>
             </li>
             <li>
               <!-- Check icon -->
@@ -1422,10 +1417,10 @@
                   <span class="check-label">Truffle Mozzarella</span>
                 </label>
                 <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Chili Cheddar Crunch">
+                  <input type="checkbox" name="flavours" value="Chilli Cheddar Crunch">
                   <span class="custom-check"></span>
                   <span class="flavour-emoji">🌶️</span>
-                  <span class="check-label">Chili Cheddar Crunch</span>
+                  <span class="check-label">Chilli Cheddar Crunch</span>
                 </label>
                 <label class="flavour-check-card">
                   <input type="checkbox" name="flavours" value="Jalapeño Cheddar">
