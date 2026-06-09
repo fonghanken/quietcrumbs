@@ -147,6 +147,29 @@
     /* ----------------------------------------------------
        HEADER / NAVIGATION
        ---------------------------------------------------- */
+    /* Announcement Bar styling */
+    .announcement-bar {
+      background-color: var(--color-gold);
+      color: var(--color-white);
+      text-align: center;
+      padding: 8px 24px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: max-height var(--transition-normal), padding var(--transition-normal), opacity var(--transition-normal);
+      overflow: hidden;
+      max-height: 40px;
+      opacity: 1;
+    }
+
+    header.scrolled .announcement-bar {
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      opacity: 0;
+    }
+
     header {
       position: fixed;
       top: 0;
@@ -154,11 +177,9 @@
       width: 100%;
       z-index: 1000;
       transition: var(--transition-normal);
-      padding: 24px 0;
     }
 
     header.scrolled {
-      padding: 16px 0;
       background: var(--glass-bg);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -170,6 +191,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 24px 0;
+      transition: var(--transition-normal);
+    }
+
+    header.scrolled .nav-wrapper {
+      padding: 16px 0;
     }
 
     .logo {
@@ -1061,6 +1088,9 @@
 
   <!-- HEADER -->
   <header id="mainHeader">
+    <div class="announcement-bar">
+      <span>🎉 Damansara Launch: Pre-Orders Now Open for Our Next Batch!</span>
+    </div>
     <div class="container nav-wrapper">
       <a href="#" class="logo" aria-label="The Quiet Crumbs Home">
         <!-- SVG Wheat Icon -->
@@ -1088,8 +1118,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>Artisanal Sourdough, Baked with Patience and Love</h1>
-        <p>A home-baking passion celebrating the rustic beauty of wild-fermented loaves and oil-drenched focaccia.
-          Naturally slow-fermented over 36 hours for a distinct, caramelized crust and soft, airy crumb.</p>
+        <p>Celebrating our launch in Damansara. Enjoy rustic, wild-fermented sourdough loaves and olive oil-rich gourmet focaccias, naturally slow-fermented over 36 hours for a perfect caramelized crust and airy crumb.</p>
         <a href="#register" class="hero-cta">
           <span>Reserve Next Batch</span>
           <!-- SVG Arrow Down Icon -->
@@ -1253,10 +1282,8 @@
 
         <!-- Left Side Information -->
         <div class="interest-info">
-          <h2>Join the Batch List</h2>
-          <p>Because we ferment our dough for 36 hours and bake in micro-batches, demand often exceeds supply. Register
-            your interest below to receive priority access to our weekly bake schedules and exclusive new flavor
-            releases.</p>
+          <h2>Damansara Launch List</h2>
+          <p>To celebrate our new launch in Damansara, we are baking exclusive micro-batches for local pickup and delivery. Secure your place on our launch list below to get priority access to weekly baking slots and fresh-out-of-the-oven updates.</p>
           <ul class="interest-info-list">
             <li>
               <!-- Check icon -->
