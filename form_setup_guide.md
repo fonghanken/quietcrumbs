@@ -13,7 +13,9 @@ Here is how to connect the registration form in `index.html` to a Google Sheet u
    - Column A: `Timestamp`
    - Column B: `Name`
    - Column C: `Email`
-   - Column D: `Phone`
+   - Column D: `Country Code`
+   - Column E: `Phone`
+   - Column F: `Flavours of Interest`
 
 ---
 
@@ -29,12 +31,14 @@ function doPost(e) {
     var data = JSON.parse(e.postData.contents);
     var date = new Date();
     
-    // Append a new row with date, name, email, and phone
+    // Append a new row with date, name, email, country code, phone, and flavours
     sheet.appendRow([
       date,
       data.name || "",
       data.email || "",
-      data.phone || ""
+      data.countryCode || "",
+      data.phone || "",
+      data.flavours || ""
     ]);
     
     return ContentService.createTextOutput(JSON.stringify({ "status": "success" }))
