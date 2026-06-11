@@ -231,39 +231,34 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 0px;
-      /* Moved brand name text directly next to logo image */
+      gap: 10px;
       font-family: var(--font-serif);
-      font-size: 1.85rem;
+      font-size: 2.5rem;
       /* Increased size of logo text */
       font-weight: 700;
       color: var(--color-brown-dark);
     }
 
     .logo span {
-      margin-left: -18px;
+      margin-left: 1px;
       /* Negative margin to pull brand text closer, overlapping PNG whitespace */
       text-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 3px rgba(255, 255, 255, 0.6);
       transition: text-shadow var(--transition-normal);
     }
 
     .logo img {
-      height: 220px;
-      /* Increased by 5x from 44px */
+      height: 150px;
       width: auto;
       object-fit: contain;
       transition: var(--transition-normal);
-      margin-top: -45px;
-      /* Increased top margin by making it less negative */
-      margin-bottom: -45px;
+      margin-top: 1px;
+      margin-bottom: 1px;
     }
 
     header.scrolled .logo img {
-      height: 150px;
-      /* Increased by 5x from 34px */
-      margin-top: -30px;
-      /* Increased top margin by making it less negative */
-      margin-bottom: -38px;
+      height: 100px;
+      margin-top: 1px;
+      margin-bottom: 1px;
     }
 
     header.scrolled .logo span {
