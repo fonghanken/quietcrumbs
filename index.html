@@ -1132,17 +1132,119 @@
     </div>
   </div>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
-  <a id="whatsappFloat"
-    href="https://wa.me/60122268470?text=Hi%20The%20Quiet%20Crumbs,%20I%20am%20interested%20in%20your%20sourdough%20focaccia!"
-    class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Enquire via WhatsApp">
-    <!-- SVG WhatsApp Icon -->
-    <svg viewBox="0 0 24 24">
-      <path
-        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.739-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.59 2.019 14.111.999 11.487 1c-5.441 0-9.866 4.372-9.87 9.802 0 1.714.464 3.39 1.343 4.868l-.965 3.525 3.652-.941zm11.951-6.84c-.302-.15-1.786-.882-2.056-.979-.27-.097-.467-.147-.662.15-.196.297-.757.953-.928 1.15-.17.197-.341.221-.643.072-1.127-.565-1.879-1.002-2.614-2.274-.194-.336-.194-.548.1-.815.197-.179.301-.326.402-.489.102-.162.051-.301-.026-.45-.076-.149-.662-1.597-.907-2.187-.238-.574-.48-.496-.662-.505-.171-.007-.368-.009-.565-.009-.197 0-.517.074-.787.371-.27.297-1.03 1.007-1.03 2.457s1.054 2.848 1.202 3.047c.147.197 2.074 3.168 5.025 4.444.702.304 1.252.485 1.68.62.705.224 1.347.193 1.854.117.565-.084 1.786-.73 2.037-1.436.252-.705.252-1.311.176-1.436-.076-.124-.27-.197-.573-.347z" />
-    </svg>
-    <span>Enquire via WhatsApp</span>
-  </a>
+  <!-- FLOATING ACTIONS WRAPPER -->
+  <style>
+    .floating-actions-wrapper {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 999;
+      align-items: flex-end;
+    }
+    .order-float {
+      background-color: var(--color-gold);
+      color: var(--color-white);
+      width: 220px;
+      height: 64px;
+      padding: 0;
+      justify-content: center;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 15px rgba(197, 143, 62, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition-normal);
+      text-decoration: none;
+    }
+    .order-float:hover {
+      background-color: var(--color-gold-hover);
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 8px 25px rgba(197, 143, 62, 0.6);
+      color: var(--color-white);
+    }
+    .whatsapp-float-override {
+      position: relative !important;
+      bottom: auto !important;
+      right: auto !important;
+      width: 220px !important;
+      height: 64px !important;
+      padding: 0 !important;
+      justify-content: center !important;
+    }
+    @media (max-width: 480px) {
+      .floating-actions-wrapper {
+        bottom: 20px;
+        right: 20px;
+        gap: 12px;
+      }
+      .order-float, .whatsapp-float-override {
+        width: 50px !important;
+        height: 50px !important;
+        justify-content: center;
+        border-radius: 50% !important;
+      }
+      .order-float .order-text-wrapper {
+        display: none !important;
+      }
+      .order-float .order-mobile-icon {
+        display: block !important;
+      }
+    }
+  </style>
+  <div class="floating-actions-wrapper">
+    <a href="https://take.app/thequietcrumbs" class="order-float" target="_blank" rel="noopener noreferrer" aria-label="Order for SG">
+      <!-- Mobile icon shown only on small screens -->
+      <svg class="order-mobile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24" width="20" height="14" style="border-radius: 2px; flex-shrink: 0; display: none;">
+        <rect width="36" height="12" fill="#ed2939"/>
+        <rect y="12" width="36" height="12" fill="#fff"/>
+        <circle cx="10" cy="6" r="4.5" fill="#fff"/>
+        <circle cx="11.5" cy="6" r="4.5" fill="#ed2939"/>
+        <g fill="#fff">
+          <polygon points="12,2.5 12.3,3.4 13.2,3.4 12.5,4 12.7,4.9 12,4.4 11.3,4.9 11.5,4 10.8,3.4 11.7,3.4"/>
+          <polygon points="14,3.5 14.3,4.4 15.2,4.4 14.5,5 14.7,5.9 14,5.4 13.3,5.9 13.5,5 12.8,4.4 13.7,4.4"/>
+          <polygon points="14.5,6 14.8,6.9 15.7,6.9 15,7.5 15.2,8.4 14.5,7.9 13.8,8.4 14,7.5 13.3,6.9 14.2,6.9"/>
+          <polygon points="12,7.5 12.3,8.4 13.2,8.4 12.5,9 12.7,9.9 12,9.4 11.3,9.9 11.5,9 10.8,8.4 11.7,8.4"/>
+          <polygon points="10,5.5 10.3,6.4 11.2,6.4 10.5,7 10.7,7.9 10,7.4 9.3,7.9 9.5,7 8.8,6.4 9.7,6.4"/>
+        </g>
+      </svg>
+      <!-- Text wrapper for desktop -->
+      <div class="order-text-wrapper" style="display: flex; flex-direction: column; align-items: center; line-height: 1.2;">
+        <span style="font-size: 1.15rem; font-weight: 700;">Order Now</span>
+        <span style="font-size: 0.8rem; font-weight: 500; opacity: 0.9; display: flex; align-items: center; gap: 4px;">
+          Only for
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24" width="16" height="11" style="border-radius: 1px; flex-shrink: 0;">
+            <rect width="36" height="12" fill="#ed2939"/>
+            <rect y="12" width="36" height="12" fill="#fff"/>
+            <circle cx="10" cy="6" r="4.5" fill="#fff"/>
+            <circle cx="11.5" cy="6" r="4.5" fill="#ed2939"/>
+            <g fill="#fff">
+              <polygon points="12,2.5 12.3,3.4 13.2,3.4 12.5,4 12.7,4.9 12,4.4 11.3,4.9 11.5,4 10.8,3.4 11.7,3.4"/>
+              <polygon points="14,3.5 14.3,4.4 15.2,4.4 14.5,5 14.7,5.9 14,5.4 13.3,5.9 13.5,5 12.8,4.4 13.7,4.4"/>
+              <polygon points="14.5,6 14.8,6.9 15.7,6.9 15,7.5 15.2,8.4 14.5,7.9 13.8,8.4 14,7.5 13.3,6.9 14.2,6.9"/>
+              <polygon points="12,7.5 12.3,8.4 13.2,8.4 12.5,9 12.7,9.9 12,9.4 11.3,9.9 11.5,9 10.8,8.4 11.7,8.4"/>
+              <polygon points="10,5.5 10.3,6.4 11.2,6.4 10.5,7 10.7,7.9 10,7.4 9.3,7.9 9.5,7 8.8,6.4 9.7,6.4"/>
+            </g>
+          </svg>
+        </span>
+      </div>
+    </a>
+    <a id="whatsappFloat"
+      href="https://wa.me/60122268470?text=Hi%20The%20Quiet%20Crumbs,%20I%20have%20an%20enquiry%20about%20your%20sourdough!"
+      class="whatsapp-float whatsapp-float-override" target="_blank" rel="noopener noreferrer" aria-label="Enquire via WhatsApp">
+      <!-- SVG WhatsApp Icon -->
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.739-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.59 2.019 14.111.999 11.487 1c-5.441 0-9.866 4.372-9.87 9.802 0 1.714.464 3.39 1.343 4.868l-.965 3.525 3.652-.941zm11.951-6.84c-.302-.15-1.786-.882-2.056-.979-.27-.097-.467-.147-.662.15-.196.297-.757.953-.928 1.15-.17.197-.341.221-.643.072-1.127-.565-1.879-1.002-2.614-2.274-.194-.336-.194-.548.1-.815.197-.179.301-.326.402-.489.102-.162.051-.301-.026-.45-.076-.149-.662-1.597-.907-2.187-.238-.574-.48-.496-.662-.505-.171-.007-.368-.009-.565-.009-.197 0-.517.074-.787.371-.27.297-1.03 1.007-1.03 2.457s1.054 2.848 1.202 3.047c.147.197 2.074 3.168 5.025 4.444.702.304 1.252.485 1.68.62.705.224 1.347.193 1.854.117.565-.084 1.786-.73 2.037-1.436.252-.705.252-1.311.176-1.436-.076-.124-.27-.197-.573-.347z" />
+      </svg>
+      <span>Have Questions?</span>
+    </a>
+  </div>
 
   <!-- HEADER -->
   <header id="mainHeader">
