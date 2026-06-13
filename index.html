@@ -24,13 +24,13 @@
       --color-gold: #c58f3e;
       --color-gold-hover: #b07c30;
       --color-gold-light: #fdf6eb;
-      --color-brown-dark: #2a1b14;
-      --color-brown-medium: #4e3629;
+      --color-brown-dark: #1b100c;
+      --color-brown-medium: #3d271d;
       --color-cinnamon: #8d6e63;
       --color-cream: #fbfbf9;
       --color-cream-dark: #f6efe2;
-      --color-text: #3c322c;
-      --color-text-muted: #6e6056;
+      --color-text: #1f1612;
+      --color-text-muted: #564941;
       --color-white: #ffffff;
       --color-whatsapp: #25d366;
       --color-whatsapp-hover: #20ba5a;
@@ -76,6 +76,8 @@
     body {
       font-family: var(--font-sans);
       background-color: var(--color-cream);
+      background-image: url('assets/TQC_PATTERN.png');
+      background-repeat: repeat;
       color: var(--color-text);
       line-height: 1.6;
       overflow-x: hidden;
@@ -207,7 +209,8 @@
     }
 
     header.scrolled {
-      background: var(--glass-bg);
+      background-image: linear-gradient(rgba(251, 251, 249, 0.92), rgba(251, 251, 249, 0.92)), url('assets/TQC_PATTERN.png');
+      background-repeat: repeat;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--glass-border);
@@ -380,7 +383,7 @@
        ABOUT SECTION
        ---------------------------------------------------- */
     .about {
-      background-color: var(--color-cream);
+      background-color: transparent;
     }
 
     .about-grid {
@@ -395,6 +398,15 @@
         grid-template-columns: 1fr;
         gap: 48px;
       }
+    }
+
+    .about-text {
+      background: rgba(251, 251, 249, 0.9);
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     .about-text h2 {
@@ -581,7 +593,7 @@
        INTEREST FORM SECTION
        ---------------------------------------------------- */
     .interest {
-      background-color: var(--color-cream);
+      background-color: transparent;
     }
 
     .interest-wrapper {
@@ -852,7 +864,6 @@
       pointer-events: none;
       background-color: var(--color-cinnamon);
     }
-
     .btn-submit .spinner {
       display: none;
       width: 20px;
@@ -991,23 +1002,20 @@
 
     @media (max-width: 480px) {
       .whatsapp-float {
-        padding: 12px 16px;
+        padding: 0 20px !important;
         bottom: 20px;
         right: 20px;
-        font-size: 0.85rem;
+        font-size: 1rem;
+        height: 50px;
+        width: auto !important;
+        border-radius: var(--radius-full) !important;
+        justify-content: center;
       }
 
       .whatsapp-float span {
-        display: none;
-        /* Icon-only on very small screens to avoid UI overlap */
-      }
-
-      .whatsapp-float {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        justify-content: center;
-        padding: 0;
+        display: flex !important;
+        font-size: 1rem;
+        font-weight: 700;
       }
     }
 
@@ -1184,10 +1192,11 @@
         gap: 12px;
       }
       .whatsapp-float-override {
-        width: 50px !important;
+        width: auto !important;
         height: 50px !important;
+        padding: 0 20px !important;
         justify-content: center;
-        border-radius: 50% !important;
+        border-radius: var(--radius-full) !important;
       }
       .order-float {
         width: auto !important;
@@ -1617,7 +1626,7 @@
   </section>
 
   <!-- SG ORDER SECTION -->
-  <section class="sg-order" id="sg-order" style="background-color: var(--color-white); padding: 60px 0;">
+  <section class="sg-order" id="sg-order" style="background-color: transparent; padding: 60px 0;">
     <div class="container" style="max-width: 700px; margin: 0 auto; text-align: center;">
       <style>
         .sg-order-btn {
