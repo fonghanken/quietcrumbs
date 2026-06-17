@@ -63,6 +63,12 @@
       max-width: 100vw;
     }
 
+    @media (max-width: 768px) {
+      html {
+        font-size: 18.5px; /* Increases all rem-based typography globally on mobile */
+      }
+    }
+
     body {
       font-family: var(--font-garamond);
       background-color: var(--color-cream);
