@@ -363,7 +363,7 @@
 
     .hero-intro {
       font-family: var(--font-allura);
-      font-size: clamp(52px, 12vw, 80px);
+      font-size: clamp(64px, 12vw, 80px);
       font-weight: bold;
       display: block; /* Starts the next text on a new line */
       line-height: 1.2;
@@ -371,13 +371,13 @@
 
     .hero-desc {
       font-family: var(--font-garamond);
-      font-size: clamp(16px, 4vw, 24px);
+      font-size: clamp(20px, 4vw, 24px);
       line-height: 1.4;
     }
 
     .hero-outro {
       font-family: var(--font-allura);
-      font-size: clamp(26px, 6vw, 38px);
+      font-size: clamp(32px, 6vw, 38px);
       display: block; /* Starts the text on a new line */
       margin-top: 8px; /* Add a little breathing room since it's on a new line */
     }
