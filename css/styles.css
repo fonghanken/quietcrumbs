@@ -73,7 +73,9 @@
       font-family: var(--font-garamond);
       background-color: var(--color-cream);
       background-image: url('../assets/TQC_Pattern_v2.0_Dark.png');
-      background-repeat: repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
       color: var(--color-text);
       line-height: 1.6;
       overflow-x: hidden;
@@ -534,8 +536,6 @@
        ---------------------------------------------------- */
     .products {
       background-color: var(--color-cream-dark);
-      background-image: linear-gradient(rgba(246, 239, 226, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(246, 239, 226, 0.4) 1px, transparent 1px);
-      background-size: 40px 40px;
     }
 
     .products-header {
