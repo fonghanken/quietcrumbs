@@ -648,6 +648,7 @@
     .care-step-icon {
       margin-bottom: 16px;
       color: var(--color-sub-1);
+      animation: float-cute 3s ease-in-out infinite;
     }
 
     .care-step-icon svg {
@@ -724,6 +725,38 @@
     .revival-method span.method-temp {
       font-size: 1.05rem;
       color: var(--color-text-muted);
+    }
+
+    @keyframes float-cute {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(3deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes pulse-cute {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1) rotate(-3deg); }
+      100% { transform: scale(1); }
+    }
+
+    .anim-lid {
+      animation: lid-close 3s ease-in-out infinite;
+    }
+
+    .anim-snowflake {
+      transform-origin: center;
+      animation: snowflake-bristle 3s ease-in-out infinite;
+    }
+
+    @keyframes lid-close {
+      0%, 100% { transform: translateY(-4px); }
+      20%, 80% { transform: translateY(0); }
+    }
+
+    @keyframes snowflake-bristle {
+      0%, 20%, 100% { transform: scale(1) rotate(0deg); }
+      30%, 50%, 70%, 90% { transform: scale(1.15) rotate(10deg); }
+      40%, 60%, 80% { transform: scale(1.15) rotate(-10deg); }
     }
 
     .care-note {
@@ -840,6 +873,70 @@
       border-radius: var(--radius-sm);
       text-transform: uppercase;
       letter-spacing: 0.05em;
+    }
+
+    /* ----------------------------------------------------
+       GAME CARD (CARE GUIDE)
+       ---------------------------------------------------- */
+    .game-card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      perspective: 1000px;
+    }
+
+    .game-card {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      background-color: var(--color-main-2);
+      transform-style: preserve-3d;
+      animation: card-bounce-in 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    }
+
+    .game-card:hover {
+      transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3), 0 0 40px rgba(212, 175, 55, 0.4);
+    }
+
+    .game-card-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 4px solid var(--color-main-2);
+    }
+
+    .game-card-glare {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.4) 25%, transparent 30%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .game-card:hover .game-card-glare {
+      opacity: 1;
+      animation: glare-sweep 2s infinite;
+    }
+
+    @keyframes card-bounce-in {
+      0% { transform: scale(0.8) translateY(50px); opacity: 0; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    @keyframes glare-sweep {
+      0% { background-position: -500px 0; }
+      100% { background-position: 500px 0; }
     }
 
     /* ----------------------------------------------------
