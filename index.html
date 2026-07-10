@@ -210,7 +210,8 @@
       <div class="products-tabs reveal">
         <button class="tab-btn active" data-target="tab-focaccia">Sourdough Focaccia</button>
         <button class="tab-btn" data-target="tab-loaves">Sourdough Loaves</button>
-        <button class="tab-btn" data-target="tab-care">Care & Storage Guide</button>
+        <button class="tab-btn" data-target="tab-storage">Storage Guide</button>
+        <button class="tab-btn" data-target="tab-care-guide">Care Guide</button>
       </div>
 
       <!-- TAB: SOURDOUGH FOCACCIA -->
@@ -304,25 +305,6 @@
           </div>
         </div>
 
-        <div class="product-card reveal">
-          <div class="product-card-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7c-1.5 1.5-2.5 3-2.5 5s1 3.5 2.5 5 2.5-3 2.5-5-1-3.5-2.5-5z" stroke-linecap="round" /></svg>
-          </div>
-          <div class="product-card-body">
-            <h3>Woodland Walnut Loaf</h3>
-            <p>Generously studded with toasted walnuts, adding a deep, roasted flavor and wonderful crunch as a contrast to the tender airy crumb.</p>
-          </div>
-        </div>
-
-        <div class="product-card reveal">
-          <div class="product-card-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7c-1.5 1.5-2.5 3-2.5 5s1 3.5 2.5 5 2.5-3 2.5-5-1-3.5-2.5-5z" stroke-linecap="round" /></svg>
-          </div>
-          <div class="product-card-body">
-            <h3>Blush Cranberry Loaf</h3>
-            <p>Sweet, tart cranberries bursting with a fruity tang under caramelised, blistered crust.</p>
-          </div>
-        </div>
 
         <div class="product-card reveal">
           <div class="product-card-icon">
@@ -337,11 +319,11 @@
       </div>
       </div>
 
-      <!-- TAB: CARE GUIDE -->
-      <div class="tab-content" id="tab-care">
+      <!-- TAB: STORAGE GUIDE -->
+      <div class="tab-content" id="tab-storage">
         <div class="care-guide-wrapper reveal">
           <div class="care-guide-intro">
-            <h3>Care & Storage Guide</h3>
+            <h3>Storage Guide</h3>
             <p>Naturally fermented and baked fresh, our bakes are best enjoyed on the day of collection.</p>
           </div>
           
@@ -349,7 +331,13 @@
             <!-- Day 1-2 -->
             <div class="care-step">
               <div class="care-step-icon">
-                <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm2 2v10c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V8H6z" /><path d="M9 3h6v3H9z" /></svg>
+                <svg viewBox="0 0 24 24">
+                  <g class="anim-lid">
+                    <path d="M4 6h16v2H4z" />
+                    <path d="M9 3h6v3H9z" />
+                  </g>
+                  <path d="M6 8v10c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V8H6z" />
+                </svg>
               </div>
               <h4>Days 1 to 2 - Enjoy it fresh</h4>
               <p>Store in an airtight container and consume within 2 days.</p>
@@ -357,8 +345,8 @@
             
             <!-- Day 3 onwards -->
             <div class="care-step">
-              <div class="care-step-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="care-step-icon anim-snowflake-container">
+                <svg viewBox="0 0 24 24" class="anim-snowflake"><path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <h4>Day 3 onwards - Freeze it</h4>
               <p>Keep in airtight freezer bags and consume within a month. Thaw before reheating.</p>
@@ -383,6 +371,16 @@
           
           <div class="care-note">
             *For loaf only - Wrap individual slices before freezing and sprinkle a few drops of water before reheating.
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: CARE GUIDE -->
+      <div class="tab-content" id="tab-care-guide">
+        <div class="game-card-container reveal">
+          <div class="game-card">
+            <img src="assets/care_card.png" alt="Focaccia Loaf Care Card" class="game-card-img">
+            <div class="game-card-glare"></div>
           </div>
         </div>
       </div>
@@ -542,18 +540,7 @@
                   <span class="flavour-emoji">🫑</span>
                   <span class="check-label">Jalapeño Cheddar</span>
                 </label>
-                <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Woodland Walnut Loaf">
-                  <span class="custom-check"></span>
-                  <span class="flavour-emoji">🌰</span>
-                  <span class="check-label">Woodland Walnut</span>
-                </label>
-                <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Blush Cranberry Loaf">
-                  <span class="custom-check"></span>
-                  <span class="flavour-emoji">🍒</span>
-                  <span class="check-label">Blush Cranberry</span>
-                </label>
+
                 <label class="flavour-check-card">
                   <input type="checkbox" name="flavours" value="Osmanthus Choco Chips Loaf">
                   <span class="custom-check"></span>
