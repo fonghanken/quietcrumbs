@@ -806,6 +806,24 @@
           }
         });
       });
+
+      // 7. Check URL hash for direct links to tabs (e.g., /#careguide)
+      const hash = window.location.hash;
+      if (hash === '#careguide' || hash === '#care-guide') {
+        const targetBtn = document.querySelector('[data-target="tab-care-guide"]');
+        if (targetBtn) {
+          // Delay slightly to ensure page layout is ready before scrolling
+          setTimeout(() => {
+            targetBtn.click();
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+              const headerHeight = document.getElementById('mainHeader').offsetHeight;
+              const targetPosition = productsSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+              window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+          }, 100);
+        }
+      }
     });
   </script>
 
