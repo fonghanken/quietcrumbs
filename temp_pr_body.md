@@ -1,4 +1,0 @@
-- Extracted inline CSS into `css/styles.css`
-- Refactored hero section typography to mix cursive and serif inline and use responsive `clamp()` sizing
-- Set global typography to EB Garamond and Playfair Display
-- Fixed relative background paths for assets
