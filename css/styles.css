@@ -73,13 +73,24 @@
     body {
       font-family: var(--font-garamond);
       background-color: var(--color-cream);
-      background-image: url('../assets/TQC_Pattern_v2.0_Dark.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
       color: var(--color-text);
       line-height: 1.6;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('../assets/TQC_Pattern_v2.0_Dark.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
     }
 
     h1,
