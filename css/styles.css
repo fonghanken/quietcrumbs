@@ -161,8 +161,8 @@
        ---------------------------------------------------- */
     /* Announcement Bar styling */
     .announcement-bar {
-      background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-hover) 50%, var(--color-brown-medium) 100%);
-      color: var(--color-white);
+      background: #3D4524;
+      color: #FFFDF0;
       text-align: center;
       padding: 10px 24px;
       font-size: 1.05rem;
@@ -322,19 +322,9 @@
       border-color: rgba(197, 143, 62, 0.3);
     }
 
-    .btn-instagram-nav svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--color-brown-dark);
-      transition: var(--transition-fast);
-    }
+    .btn-instagram-nav svg { width: 20px; height: 20px; fill: inherit; transition: var(--transition-fast); }
 
-    .btn-care-nav svg {
-      width: 20px;
-      height: 20px;
-      color: var(--color-brown-dark);
-      transition: var(--transition-fast);
-    }
+    .btn-care-nav svg { width: 20px; height: 20px; color: inherit; transition: var(--transition-fast); }
 
     .btn-instagram-nav:hover svg {
       fill: var(--color-gold);
@@ -352,7 +342,7 @@
       min-height: 700px;
       display: flex;
       align-items: center;
-      background-image: linear-gradient(rgba(42, 27, 20, 0.5), rgba(42, 27, 20, 0.65)), url('../assets/hero-1.jpg');
+      background-image: linear-gradient(rgba(42, 27, 20, 0.5), rgba(42, 27, 20, 0.65)), url('../assets/hero-1-opt.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -495,8 +485,8 @@
       font-family: var(--font-serif);
       font-style: italic;
       font-size: 1.2rem;
-      color: var(--color-cinnamon);
-      border-left: 3px solid var(--color-gold);
+      color: #3D4524;
+      border-left: 3px solid #3D4524;
       padding-left: 20px;
       margin: 28px 0;
     }
@@ -1336,7 +1326,7 @@
       color: var(--color-white);
       padding: 14px 22px;
       border-radius: var(--radius-full);
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4), inset 2px 2px 4px rgba(255, 255, 255, 0.4), inset -2px -2px 4px rgba(0, 0, 0, 0.2);
       z-index: 999;
       display: flex;
       align-items: center;
@@ -1351,7 +1341,7 @@
     .whatsapp-float:hover {
       background-color: var(--color-whatsapp-hover);
       transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.4), inset -2px -2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .whatsapp-float svg {
@@ -1406,11 +1396,11 @@
        FOOTER
        ---------------------------------------------------- */
     footer {
-      background-color: var(--color-brown-dark);
-      color: rgba(255, 255, 255, 0.7);
+      background-color: #3D4524;
+      color: #FFFDF0;
       padding: 30px 0;
       /* Increased footer padding */
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(255, 253, 240, 0.2);
     }
 
     .footer-content {
@@ -1435,7 +1425,7 @@
 
     .footer-logo h3 {
       font-size: 1.4rem;
-      color: var(--color-white);
+      color: #FFFDF0;
       font-family: var(--font-garamond);
     }
 
@@ -1447,7 +1437,7 @@
     .footer-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 16px;
     }
 
     .footer-link-item {
@@ -1457,13 +1447,13 @@
       width: 44px;
       height: 44px;
       border-radius: var(--radius-full);
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: rgba(255, 253, 240, 0.1);
       transition: var(--transition-fast);
     }
 
     .footer-link-item:hover {
-      background-color: var(--color-gold);
-      color: var(--color-white);
+      background-color: #FFFDF0;
+      color: #3D4524;
       transform: translateY(-2px);
     }
 
@@ -1471,18 +1461,18 @@
       width: 20px;
       height: 20px;
       fill: currentColor;
-      color: rgba(255,255,255,0.7);
+      color: #FFFDF0;
     }
 
     /* Stroked footer SVGs (book, cart) should not be filled */
     .footer-link-item svg[fill="none"] {
       fill: none !important;
-      stroke: rgba(255,255,255,0.7);
+      stroke: #FFFDF0;
     }
 
     .footer-copyright {
       margin-top: 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 253, 240, 0.2);
       padding-top: 24px;
       font-size: 0.8rem;
       text-align: center;
@@ -1732,3 +1722,37 @@
           color: var(--color-white);
         }
 
+
+/* Carousel Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-hover);
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) transparent;
+}
+
+/* Carousel Buttons */
+.carousel-btn:hover {
+  opacity: 1 !important;
+  color: #fff !important;
+  transform: translateY(-50%) scale(1.1) !important;
+}
+
+/* Carousel Buttons */
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+    .footer-link-item:hover svg { color: #3D4524; }
+    .footer-link-item:hover svg[fill="none"] { stroke: #3D4524; }
