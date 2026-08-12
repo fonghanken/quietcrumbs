@@ -1,631 +1,312 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Quiet Crumbs | Artisanal Sourdough & Gourmet Focaccia</title>
-  <meta name="description"
-    content="Artisanal sourdough and gourmet focaccia, baked with patience, love, and a 72-hour slow fermentation process. Fresh from our home kitchen to your table.">
-
-  <!-- Open Graph Meta Tags for Link Previews (WhatsApp, Telegram, etc.) -->
-  <meta property="og:title" content="The Quiet Crumbs | Artisanal Sourdough & Gourmet Focaccia">
-  <meta property="og:description" content="Artisanal sourdough and gourmet focaccia, baked with patience, love, and a 72-hour slow fermentation process. Fresh from our home kitchen to your table.">
-  <meta property="og:image" content="https://thequietcrumbs.com/assets/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://thequietcrumbs.com/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card Data -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Quiet Crumbs | Artisanal Sourdough & Gourmet Focaccia">
-  <meta name="twitter:description" content="Artisanal sourdough and gourmet focaccia, baked with patience, love, and a 72-hour slow fermentation process. Fresh from our home kitchen to your table.">
-  <meta name="twitter:image" content="https://thequietcrumbs.com/assets/og-image.jpg">
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/favicon.png">
-
-  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Allura&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Quiet Crumbs | Artisanal Sourdough &amp; Gourmet Focaccia</title>
+<meta content="Artisanal sourdough and gourmet focaccia, baked with patience, love, and a 72-hour slow fermentation process. Fresh from our home kitchen to your table." name="description"/>
+<!-- Open Graph Meta Tags for Link Previews (WhatsApp, Telegram, etc.) -->
+<meta content="The Quiet Crumbs | Artisanal Sourdough &amp; Gourmet Focaccia" property="og:title"/>
+<meta content="Artisanal sourdough and gourmet focaccia, baked with patience, love, and a 72-hour slow fermentation process. Fresh from our home kitchen to your table." property="og:description"/>
+<meta content="https://thequietcrumbs.com/assets/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://thequietcrumbs.com/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<!-- Twitter Card Data -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="The Quiet Crumbs | Artisanal Sourdough &amp; Gourmet Focaccia" name="twitter:title"/>
+<meta content="Artisanal sourdough and gourmet focaccia, baked with patience, love, and a 72-hour slow fermentation process. Fresh from our home kitchen to your table." name="twitter:description"/>
+<meta content="https://thequietcrumbs.com/assets/og-image.jpg" name="twitter:image"/>
+<!-- Favicon -->
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<link href="assets/favicon.png" rel="apple-touch-icon"/>
+<!-- Preload LCP Background Image -->
+<link as="image" href="assets/hero-1-opt.jpg" rel="preload"/>
+<!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-
-  <!-- SUCCESS TOAST -->
-  <div class="toast" id="successToast">
-    <div class="toast-icon">
-      <svg viewBox="0 0 24 24">
-        <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
-    <div class="toast-content">
-      <h4>Pre-Order Registered!</h4>
-      <p>Thank you. We will contact you once the next batch is ready.</p>
-    </div>
-  </div>
-
-  <!-- FLOATING ACTIONS WRAPPER -->
-  <!-- SG Order (middle) -->
-  <a href="https://order.thequietcrumbs.com/" class="whatsapp-float" style="bottom: 88px; width: 56px; height: 56px; padding: 0; justify-content: center; background: var(--color-main-1); box-shadow: 0 4px 15px rgba(61, 69, 36, 0.4); animation: sgPulse 2s infinite; position: fixed; right: 24px;" target="_blank" rel="noopener noreferrer" aria-label="Order Now (Singapore)">
-    <svg viewBox="0 0 24 24" style="fill: none !important; stroke: white; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; width: 24px; height: 24px;">
-      <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-    </svg>
-    <span style="position: absolute; top: -6px; right: -6px; font-size: 1rem; line-height: 1; background: white; border-radius: 999px; padding: 2px 4px; box-shadow: 0 1px 4px rgba(0,0,0,0.25);">🇸🇬</span>
-  </a>
-  <!-- MY Order - TBA (bottom) -->
-  <div style="position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; border-radius: 50%; background: #d0d0d0; display: flex; align-items: center; justify-content: center; cursor: not-allowed; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 999; opacity: 0.85;" title="Coming soon for Malaysia" aria-label="Malaysia - Coming Soon">
-    <svg viewBox="0 0 24 24" style="fill: none !important; stroke: #888; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; width: 24px; height: 24px;">
-      <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-    </svg>
-    <!-- TBA overlay -->
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.55); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 500; font-size: 0.7rem; letter-spacing: 0.5px;">TBA</div>
-    <!-- Flag badge on top -->
-    <span style="position: absolute; top: -6px; right: -6px; font-size: 1rem; line-height: 1; background: white; border-radius: 999px; padding: 2px 4px; box-shadow: 0 1px 4px rgba(0,0,0,0.25); z-index: 1;">🇲🇾</span>
-  </div>
-  <!-- WhatsApp (top) -->
-  <a id="whatsappFloat" href="https://wa.me/6594726942" class="whatsapp-float" style="position: fixed; bottom: 152px; right: 24px; width: 56px; height: 56px; padding: 0; justify-content: center;" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 26px; height: 26px;">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-
-  <header id="mainHeader">
-    <div class="announcement-bar">
-      <span>🎉 Launching in Damansara 🇲🇾 Soon! Pre-Order Now by Registering your Interest!</span>
-    </div>
-    <div class="container nav-wrapper">
-      <a href="#" class="logo" aria-label="The Quiet Crumbs Home">
-        <img src="assets/thequietcrumbs_logo.png" alt="The Quiet Crumbs">
-        <span>the quiet crumbs</span>
-      </a>
-      <div class="nav-social">
-        <a href="#care-guide" class="btn-care-nav" aria-label="Care Guide" style="color: var(--color-main-1);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-        </a>
-        <a href="https://order.thequietcrumbs.com/" class="btn-care-nav" aria-label="Order" target="_blank" rel="noopener noreferrer" style="color: var(--color-main-1);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-        </a>
-        <a href="https://www.instagram.com/thequietcrumbs/" class="btn-instagram-nav" target="_blank"
-          rel="noopener noreferrer" aria-label="Follow us on Instagram" style="color: var(--color-main-1);">
-          <!-- SVG Instagram Icon -->
-          <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;">
-            <path
-              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-content">
-        <div style="color: var(--color-main-2); max-width: 800px; margin: 0 auto;">
-          <span class="hero-intro">Sourdough focaccia</span>
-          <span class="hero-desc">where airy, pillowy crumb meets golden, crispy crust gloriously bathed in olive oil. Naturally slow-fermented over 72 hours, lovingly dimpled by hand and unmistakably home-made,</span>
-          <span class="hero-outro">from our family to yours.</span>
-        </div>
-        <a href="#register" class="hero-cta" style="background-color: var(--color-main-1); border-color: var(--color-main-1); color: white; margin-top: 24px;">
-          <div style="display: flex; flex-direction: column; align-items: center; line-height: 1.1; gap: 2px;">
-            <span style="font-size: 1.3rem;">Register Interest</span>
-            <span style="font-size: 0.8rem; font-weight: 500; opacity: 0.9; text-shadow: none; display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.9);">Only for <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="16" height="10" style="border-radius: 1px;"><rect width="1200" height="600" fill="#fff"/><g fill="#cc0000"><rect y="0" width="1200" height="42.85"/><rect y="85.71" width="1200" height="42.85"/><rect y="171.42" width="1200" height="42.85"/><rect y="257.14" width="1200" height="42.85"/><rect y="342.85" width="1200" height="42.85"/><rect y="428.57" width="1200" height="42.85"/><rect y="514.28" width="1200" height="42.85"/></g><rect width="600" height="342.85" fill="#000066"/><circle cx="300" cy="171.42" r="120" fill="#fc0"/><circle cx="330" cy="171.42" r="105" fill="#000066"/><path d="M375.8,111.4l5.3,16.2l17-0.1l-13.8,10l5.2,16.3l-13.7-10.1l-13.8,10.1l5.2-16.3l-13.7-10.1l17,0.1L375.8,111.4z" fill="#fc0" transform="translate(-10, 0) scale(1.5)"/></svg></span>
-          </div>
-          <!-- SVG Arrow Down Icon -->
-          <svg viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <span class="badge">Our Story</span>
-          <h2>Quiet Dedication to Natural, Handcrafted Goodness</h2>
-          <div style="font-family: var(--font-garamond); font-size: 1.1rem; color: var(--color-text);">
-            <p style="margin-bottom: 1.2em;">At <strong>TheQuietCrumbs</strong>, we've learned that good sourdough cannot be rushed. In a world of endless deadlines and hectic schedules, our story starts in the quiet moments after nightfall, when the frenzy of the day settles into a slower tempo. In this momentary reprieve, a woman dedicated to improving her <em>crumb</em> spent hours on end studying her sourdough starters. It took more than a few months of experimenting and countless feedback loops to finally decipher the fickle, temperamental and unhurried nature of wild yeast.</p>
-            <p style="margin-bottom: 1.5em;">Fermented with this quiet dedication, our sourdough focaccia embodies our unwavering promise of quality derived only from the natural passage of time. In a world that often seeks shortcuts to efficiency above all else, let our sourdough focaccia be your reminder that the good things are worth slowing down for.</p>
-          </div>
-          <div class="about-highlight" style="font-family: var(--font-garamond); font-size: 1.15rem; font-style: normal;">
+<!-- SUCCESS TOAST -->
+<div class="toast" id="successToast">
+<div class="toast-icon">
+<svg viewbox="0 0 24 24">
+<path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="toast-content">
+<h4>Pre-Order Registered!</h4>
+<p>Thank you. We will contact you once the next batch is ready.</p>
+</div>
+</div>
+<!-- FLOATING ACTIONS WRAPPER -->
+<!-- SG Order (middle) -->
+<a aria-label="Order Now (Singapore)" class="whatsapp-float" href="https://order.thequietcrumbs.com/" rel="noopener noreferrer" style="bottom: 88px; width: 56px; height: 56px; padding: 0; justify-content: center; background: var(--color-main-1); box-shadow: 0 4px 15px rgba(61, 69, 36, 0.4), inset 2px 2px 4px rgba(255,255,255,0.3), inset -2px -2px 4px rgba(0,0,0,0.3); animation: sgPulse 2s infinite; position: fixed; right: 24px;" target="_blank">
+<svg style="fill: none !important; stroke: white; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; width: 24px; height: 24px;" viewbox="0 0 24 24">
+<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+</svg>
+<span style="position: absolute; top: -4px; right: -4px; font-size: 1rem; line-height: 1; background: white; border-radius: 999px; padding: 2px 4px; box-shadow: 0 1px 4px rgba(0,0,0,0.25);">🇸🇬</span>
+</a>
+<!-- MY Order (bottom) -->
+<a aria-label="Order Now (Malaysia)" class="whatsapp-float" href="https://ordermy.thequietcrumbs.com" rel="noopener noreferrer" style="bottom: 24px; width: 56px; height: 56px; padding: 0; justify-content: center; background: var(--color-main-2); box-shadow: 0 4px 15px rgba(61, 69, 36, 0.4), inset 2px 2px 4px rgba(255,255,255,0.6), inset -2px -2px 4px rgba(0,0,0,0.1); border: 1px solid rgba(61, 69, 36, 0.2); position: fixed; right: 24px; display: flex; align-items: center; border-radius: 50%; z-index: 999;" target="_blank">
+<svg style="fill: none !important; stroke: var(--color-main-1); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; width: 24px; height: 24px;" viewbox="0 0 24 24">
+<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+</svg>
+<span style="position: absolute; top: -4px; right: -4px; font-size: 1rem; line-height: 1; background: white; border-radius: 999px; padding: 2px 4px; box-shadow: 0 1px 4px rgba(0,0,0,0.25);">🇲🇾</span>
+</a>
+<a aria-label="Chat on WhatsApp" class="whatsapp-float" href="https://wa.me/6594726942" id="whatsappFloat" rel="noopener noreferrer" style="position: fixed; bottom: 152px; right: 24px; width: 56px; height: 56px; padding: 0; justify-content: center;" target="_blank">
+<svg fill="currentColor" style="width: 26px; height: 26px;" viewbox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</a>
+<header id="mainHeader">
+<div class="announcement-bar">
+<span>🎉 Launching in Malaysia soon! Pre-order on 22nd August!</span>
+</div>
+<div class="container nav-wrapper">
+<a aria-label="The Quiet Crumbs Home" class="logo" href="#">
+<img alt="The Quiet Crumbs" src="assets/thequietcrumbs_logo.png"/>
+<span style="color: #3D4524;">the quiet crumbs</span>
+</a>
+<div class="nav-social">
+<a aria-label="Care Guide" class="btn-care-nav" href="#care-guide" style="background-color: var(--color-main-1); color: var(--color-main-2);">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="width: 22px; height: 22px;" viewbox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+</a>
+<a aria-label="Order SG" class="btn-care-nav" href="https://take.app/thequietcrumbs" rel="noopener noreferrer" style="background-color: var(--color-main-2); color: var(--color-main-1); position: relative;" target="_blank">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="width: 22px; height: 22px;" viewbox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+<span style="position:absolute;top: -4px;right: -4px;font-size:0.8rem;background:white;border-radius:999px;padding:0px 2px;box-shadow:0 1px 3px rgba(0,0,0,0.1);line-height:1;">🇸🇬</span>
+</a><a aria-label="Order MY" class="btn-care-nav" href="https://ordermy.thequietcrumbs.com" rel="noopener noreferrer" style="background-color: var(--color-main-1); color: var(--color-main-2); position: relative;" target="_blank">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="width: 22px; height: 22px;" viewbox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+<span style="position:absolute;top: -4px;right: -4px;font-size:0.8rem;background:white;border-radius:999px;padding:0px 2px;box-shadow:0 1px 3px rgba(0,0,0,0.1);line-height:1;">🇲🇾</span>
+</a><a aria-label="Follow us on Instagram" class="btn-instagram-nav" href="https://www.instagram.com/thequietcrumbs/" rel="noopener noreferrer" style="background-color: var(--color-main-2); color: var(--color-main-1); " target="_blank">
+<!-- SVG Instagram Icon -->
+<svg fill="currentColor" style="width: 18px; height: 18px;" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path>
+</svg>
+</a>
+</div>
+</div>
+</header>
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+<div style="color: var(--color-main-2); max-width: 800px; margin: 0 auto;">
+<span class="hero-intro">Sourdough focaccia</span>
+<span class="hero-desc">where airy, pillowy crumb meets golden, crispy crust gloriously bathed in olive oil. Naturally slow-fermented over 72 hours, lovingly dimpled by hand and unmistakably home-made,</span>
+<span class="hero-outro">from our family to yours.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+<div class="container">
+<div class="about-grid">
+<div class="about-text reveal">
+<span class="badge" style="background-color: #FFFDF0; color: #3D4524;">Our Story</span>
+<h2 style="color: #3D4524;">Quiet Dedication to Natural, Handcrafted Goodness</h2>
+<div style="font-family: var(--font-garamond); font-size: 1.1rem; color: #3D4524;">
+<p style="margin-bottom: 1.2em;">At <strong>TheQuietCrumbs</strong>, we've learned that good sourdough cannot be rushed. In a world of endless deadlines and hectic schedules, our story starts in the quiet moments after nightfall, when the frenzy of the day settles into a slower tempo. In this momentary reprieve, a woman dedicated to improving her <em>crumb</em> spent hours on end studying her sourdough starters. It took more than a few months of experimenting and countless feedback loops to finally decipher the fickle, temperamental and unhurried nature of wild yeast.</p>
+<p style="margin-bottom: 1.5em;">Fermented with this quiet dedication, our sourdough focaccia embodies our unwavering promise of quality derived only from the natural passage of time. In a world that often seeks shortcuts to efficiency above all else, let our sourdough focaccia be your reminder that the good things are worth slowing down for.</p>
+</div>
+<div class="about-highlight" style="font-family: var(--font-garamond); font-size: 1.15rem; font-style: normal;">
             "Made with 100% sourdough starter. Slowly fermented over 72 hours. Freshly baked-to-order. No industrial yeasts, no additives, no shortcuts."
           </div>
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-number">72h</span>
-              <span class="stat-label">Slow Fermentation</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Natural Starter</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">Limited</span>
-              <span class="stat-label">Batches Made-to-Order</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-image-container reveal">
-          <div class="about-image-wrapper">
-            <img src="assets/our-story.jpg"
-              alt="A beautiful overhead shot of a freshly baked sourdough focaccia" class="about-image">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS SECTION -->
-  <section class="products" id="products">
-    <div class="container">
-      
-      <div class="products-header reveal" style="text-align: center; margin-bottom: 30px;">
-        <span class="badge" style="background-color: var(--color-main-1); color: var(--color-main-2); border: none;">Our Specialties</span>
-      </div>
-      
-      
-
-      <!-- TAB: SOURDOUGH FOCACCIA -->
-      <div id="section-focaccia">
-        <h3 class="reveal" style="font-family: var(--font-heading); color: var(--color-main-1); font-size: 2.2rem; text-align: center; margin-bottom: 15px;">Sourdough Focaccia</h3>
-        <p class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto 40px auto; color: var(--color-main-1); opacity: 0.9; line-height: 1.6;">Thick slabs of airy, pillowy dough bathed in olive oil, lovingly dimpled by hand and baked to a deep golden crisp. Select from our signature specialty flavours:</p>
-      <div class="products-grid" style="margin-bottom: 80px;">
-        <div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-cream); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
-          <div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
-            <img src="assets/flavour_chilli_cheddar.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" alt="Chilli Cheddar Crunch">
-          </div>
-          <div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-            <h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-brown-medium); font-size: 1.25rem; margin-bottom: 12px;">Chilli Cheddar Crunch</h3>
-            <p style="flex-grow: 1; color: var(--color-brown-medium); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Sharp, aged cheddar cheese paired with the popular Lao Gan Ma chilli sauce. For the ones who crave the heat.</p>
-            <div class="product-card-actions">
-              <div style="display: flex; gap: 8px; align-items: center; justify-content: center; width: 100%;">
-              <a href="https://take.app/thequietcrumbs/p/cmpo6u0mj001704i5awvtyfr2" class="btn-sg-modern" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; background-color: var(--color-main-1); color: var(--color-main-2); padding: 0; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600; width: 44px; height: 44px; border-radius: 50%; transition: background-color 0.2s; position: relative;" onmouseover="this.style.backgroundColor='#2b301a'" onmouseout="this.style.backgroundColor='var(--color-main-1)'">
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;">🇸🇬</span>
-              </a>
-              <div style="display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; color: #a0a0a0; padding: 0; border-radius: var(--radius-sm); font-weight: 600; width: 44px; height: 44px; border-radius: 50%; cursor: not-allowed; opacity: 0.8; position: relative;" title="Coming soon">
-                
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.65); color: white; display: flex; align-items: center; justify-content: center; font-weight: 500; letter-spacing: 1px; border-radius: 50%; font-size: 0.6rem; letter-spacing: 0.5px;">TBA</div>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;z-index:1;">🇲🇾</span>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-cream); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
-          <div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
-            <img src="assets/flavour_rosemary_sea_salt.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" alt="Rosemary Sea Salt">
-          </div>
-          <div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-            <h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-brown-medium); font-size: 1.25rem; margin-bottom: 12px;">Rosemary Sea Salt</h3>
-            <p style="flex-grow: 1; color: var(--color-brown-medium); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Our signature classic. Fragrant rosemary and flaky sea salt atop a golden, olive-oil soaked crust.</p>
-            <div class="product-card-actions">
-              <div style="display: flex; gap: 8px; align-items: center; justify-content: center; width: 100%;">
-              <a href="https://take.app/thequietcrumbs/p/cmqc7j5mf000s0ckgv0p15gfh" class="btn-sg-modern" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; background-color: var(--color-main-1); color: var(--color-main-2); padding: 0; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600; width: 44px; height: 44px; border-radius: 50%; transition: background-color 0.2s; position: relative;" onmouseover="this.style.backgroundColor='#2b301a'" onmouseout="this.style.backgroundColor='var(--color-main-1)'">
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;">🇸🇬</span>
-              </a>
-              <div style="display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; color: #a0a0a0; padding: 0; border-radius: var(--radius-sm); font-weight: 600; width: 44px; height: 44px; border-radius: 50%; cursor: not-allowed; opacity: 0.8; position: relative;" title="Coming soon">
-                
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.65); color: white; display: flex; align-items: center; justify-content: center; font-weight: 500; letter-spacing: 1px; border-radius: 50%; font-size: 0.6rem; letter-spacing: 0.5px;">TBA</div>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;z-index:1;">🇲🇾</span>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-cream); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
-          <div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
-            <img src="assets/flavour_smoked_garlic.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" alt="Smoked Garlic">
-          </div>
-          <div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-            <h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-brown-medium); font-size: 1.25rem; margin-bottom: 12px;">Smoked Garlic</h3>
-            <p style="flex-grow: 1; color: var(--color-brown-medium); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Earthy and bold, featuring slow-roasted garlic that melts into the pillowy dough.</p>
-            <div class="product-card-actions">
-              <div style="display: flex; gap: 8px; align-items: center; justify-content: center; width: 100%;">
-              <a href="https://take.app/thequietcrumbs/p/cmqc7j5mf000s0ckgv0p15gfh" class="btn-sg-modern" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; background-color: var(--color-main-1); color: var(--color-main-2); padding: 0; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600; width: 44px; height: 44px; border-radius: 50%; transition: background-color 0.2s; position: relative;" onmouseover="this.style.backgroundColor='#2b301a'" onmouseout="this.style.backgroundColor='var(--color-main-1)'">
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;">🇸🇬</span>
-              </a>
-              <div style="display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; color: #a0a0a0; padding: 0; border-radius: var(--radius-sm); font-weight: 600; width: 44px; height: 44px; border-radius: 50%; cursor: not-allowed; opacity: 0.8; position: relative;" title="Coming soon">
-                
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.65); color: white; display: flex; align-items: center; justify-content: center; font-weight: 500; letter-spacing: 1px; border-radius: 50%; font-size: 0.6rem; letter-spacing: 0.5px;">TBA</div>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;z-index:1;">🇲🇾</span>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-cream); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
-          <div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
-            <img src="assets/flavour_truffle_mozzarella.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" alt="Truffle Mozzarella">
-          </div>
-          <div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-            <h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-brown-medium); font-size: 1.25rem; margin-bottom: 12px;">Truffle Mozzarella</h3>
-            <p style="flex-grow: 1; color: var(--color-brown-medium); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Indulgent truffle aroma combined with gooey, melted mozzarella cheese.</p>
-            <div class="product-card-actions">
-              <div style="display: flex; gap: 8px; align-items: center; justify-content: center; width: 100%;">
-              <a href="https://take.app/thequietcrumbs/p/cmqc7n6ao00020cktofhcmab2" class="btn-sg-modern" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; background-color: var(--color-main-1); color: var(--color-main-2); padding: 0; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600; width: 44px; height: 44px; border-radius: 50%; transition: background-color 0.2s; position: relative;" onmouseover="this.style.backgroundColor='#2b301a'" onmouseout="this.style.backgroundColor='var(--color-main-1)'">
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;">🇸🇬</span>
-              </a>
-              <div style="display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; color: #a0a0a0; padding: 0; border-radius: var(--radius-sm); font-weight: 600; width: 44px; height: 44px; border-radius: 50%; cursor: not-allowed; opacity: 0.8; position: relative;" title="Coming soon">
-                
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.65); color: white; display: flex; align-items: center; justify-content: center; font-weight: 500; letter-spacing: 1px; border-radius: 50%; font-size: 0.6rem; letter-spacing: 0.5px;">TBA</div>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;z-index:1;">🇲🇾</span>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-cream); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
-          <div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
-            <img src="assets/flavour_kimchi_parmesan.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" alt="Kimchi Parmesan">
-          </div>
-          <div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-            <h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-brown-medium); font-size: 1.25rem; margin-bottom: 12px;">Kimchi Parmesan</h3>
-            <p style="flex-grow: 1; color: var(--color-brown-medium); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">A fusion of tangy, spicy kimchi and savory parmesan for a unique umami kick.</p>
-            <div class="product-card-actions">
-              <div style="display: flex; gap: 8px; align-items: center; justify-content: center; width: 100%;">
-              <a href="https://take.app/thequietcrumbs/p/cmrm0ot6m00000bku5y21mkoy" class="btn-sg-modern" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; background-color: var(--color-main-1); color: var(--color-main-2); padding: 0; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600; width: 44px; height: 44px; border-radius: 50%; transition: background-color 0.2s; position: relative;" onmouseover="this.style.backgroundColor='#2b301a'" onmouseout="this.style.backgroundColor='var(--color-main-1)'">
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;">🇸🇬</span>
-              </a>
-              <div style="display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; color: #a0a0a0; padding: 0; border-radius: var(--radius-sm); font-weight: 600; width: 44px; height: 44px; border-radius: 50%; cursor: not-allowed; opacity: 0.8; position: relative;" title="Coming soon">
-                
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.65); color: white; display: flex; align-items: center; justify-content: center; font-weight: 500; letter-spacing: 1px; border-radius: 50%; font-size: 0.6rem; letter-spacing: 0.5px;">TBA</div>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;z-index:1;">🇲🇾</span>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
-
-      <!-- TAB: SOURDOUGH LOAVES -->
-      <div id="section-loaves" style="margin-top: 60px;">
-        <h3 class="reveal" style="font-family: var(--font-heading); color: var(--color-main-1); font-size: 2.2rem; text-align: center; margin-bottom: 15px;">Sourdough Loaves</h3>
-        <p class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto 40px auto; color: var(--color-main-1); opacity: 0.9; line-height: 1.6;">Rustic, naturally leavened sourdough loaves baked to perfection with a blistered, crackly crust and an open, chewy crumb.</p>
-      <div class="products-grid" style="margin-bottom: 80px;">
-        <div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-cream); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
-          <div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
-            <img src="assets/flavour_classic_country.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" alt="Classic Country Loaf">
-          </div>
-          <div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-            <h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-brown-medium); font-size: 1.25rem; margin-bottom: 12px;">Classic Country Loaf</h3>
-            <p style="flex-grow: 1; color: var(--color-brown-medium); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Our signature rustic sourdough loaf, naturally leavened over 72 hours for a complex, tangy flavor and perfectly blistered crust.</p>
-            <div class="product-card-actions">
-              <div style="display: flex; gap: 8px; align-items: center; justify-content: center; width: 100%;">
-              <a href="https://take.app/thequietcrumbs/p/cmpo6u0mj001704i5awvtyfr2" class="btn-sg-modern" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; background-color: var(--color-main-1); color: var(--color-main-2); padding: 0; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600; width: 44px; height: 44px; border-radius: 50%; transition: background-color 0.2s; position: relative;" onmouseover="this.style.backgroundColor='#2b301a'" onmouseout="this.style.backgroundColor='var(--color-main-1)'">
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;">🇸🇬</span>
-              </a>
-              <div style="display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; color: #a0a0a0; padding: 0; border-radius: var(--radius-sm); font-weight: 600; width: 44px; height: 44px; border-radius: 50%; cursor: not-allowed; opacity: 0.8; position: relative;" title="Coming soon">
-                
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.65); color: white; display: flex; align-items: center; justify-content: center; font-weight: 500; letter-spacing: 1px; border-radius: 50%; font-size: 0.6rem; letter-spacing: 0.5px;">TBA</div>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;z-index:1;">🇲🇾</span>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-cream); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
-          <div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
-            <img src="assets/flavour_jalapeno_cheddar.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" alt="Jalapeño Cheddar Loaf">
-          </div>
-          <div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-            <h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-brown-medium); font-size: 1.25rem; margin-bottom: 12px;">Jalapeño Cheddar Loaf</h3>
-            <p style="flex-grow: 1; color: var(--color-brown-medium); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">A fiery twist on our classic loaf, loaded with spicy jalapeños and pockets of melted cheddar cheese.</p>
-            <div class="product-card-actions">
-              <div style="display: flex; gap: 8px; align-items: center; justify-content: center; width: 100%;">
-              <a href="https://take.app/thequietcrumbs/p/cmpo6u0mj001704i5awvtyfr2" class="btn-sg-modern" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; background-color: var(--color-main-1); color: var(--color-main-2); padding: 0; border-radius: var(--radius-sm); text-decoration: none; font-weight: 600; width: 44px; height: 44px; border-radius: 50%; transition: background-color 0.2s; position: relative;" onmouseover="this.style.backgroundColor='#2b301a'" onmouseout="this.style.backgroundColor='var(--color-main-1)'">
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;">🇸🇬</span>
-              </a>
-              <div style="display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; color: #a0a0a0; padding: 0; border-radius: var(--radius-sm); font-weight: 600; width: 44px; height: 44px; border-radius: 50%; cursor: not-allowed; opacity: 0.8; position: relative;" title="Coming soon">
-                
-                <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.65); color: white; display: flex; align-items: center; justify-content: center; font-weight: 500; letter-spacing: 1px; border-radius: 50%; font-size: 0.6rem; letter-spacing: 0.5px;">TBA</div>
-                <span style="position:absolute;top:-7px;right:-7px;font-size:0.85rem;background:white;border-radius:999px;padding:1px 3px;box-shadow:0 1px 4px rgba(0,0,0,0.2);line-height:1;z-index:1;">🇲🇾</span>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
-
-
-
-
-    </div>
-  </section>
-
-  <!-- INTEREST / PRE-ORDER FORM SECTION -->
-  <section class="interest" id="register">
-    <div class="container">
-      <div class="interest-wrapper reveal">
-
-        <!-- Left Side Information -->
-        <div class="interest-info">
-          <h2>Launching in Damansara 🇲🇾!</h2>
-          <p>To celebrate our new launch in Damansara 🇲🇾, we are baking exclusive micro-batches for local pickup and
-            delivery. Secure your place on our launch list below to get priority access to baking slots and
-            fresh-out-of-the-oven updates.</p>
-          <ul class="interest-info-list">
-            <li>
-              <!-- Check icon -->
-              <svg viewBox="0 0 24 24">
-                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-              </svg>
-              <span>Priority pre-ordering</span>
-            </li>
-            <li>
-              <!-- Check icon -->
-              <svg viewBox="0 0 24 24">
-                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-              </svg>
-              <span>Exclusive, limited-run seasonal flavors</span>
-            </li>
-            <li>
-              <!-- Check icon -->
-              <svg viewBox="0 0 24 24">
-                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-              </svg>
-              <span>Fresh, warm pick-up notifications</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Right Side Form -->
-        <div class="interest-form-container">
-          <form id="interestForm" novalidate>
-
-            <!-- Name Field -->
-            <div class="form-group">
-              <label for="userName">Name</label>
-              <div class="input-wrapper">
-                <!-- User Icon -->
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                </svg>
-                <input type="text" id="userName" name="name" class="form-control" placeholder="Enter your name"
-                  required>
-              </div>
-            </div>
-
-            <!-- Email Field -->
-            <div class="form-group">
-              <label for="userEmail">Email Address</label>
-              <div class="input-wrapper">
-                <!-- Email Icon -->
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-                <input type="email" id="userEmail" name="email" class="form-control" placeholder="yourname@email.com"
-                  required>
-              </div>
-            </div>
-
-            <!-- Mobile Field (2 text boxes for Country Code + Number) -->
-            <div class="form-group">
-              <label for="userPhone">Mobile Number</label>
-              <div style="display: flex; gap: 12px;">
-                <!-- Text Box 1: Country Code -->
-                <div style="width: 100px; flex-shrink: 0;">
-                  <input type="text" id="userCountryCode" name="countryCode" class="form-control"
-                    style="padding-left: 14px; padding-right: 14px; text-align: center;" value="+60" placeholder="+60"
-                    required>
-                </div>
-                <!-- Text Box 2: Mobile Number -->
-                <div class="input-wrapper" style="flex: 1;">
-                  <!-- Phone Icon -->
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-5 20c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm4.25-4H7.75V6h8.5v11z" />
-                  </svg>
-                  <input type="tel" id="userPhone" name="phone" class="form-control" placeholder="123456789" required>
-                </div>
-              </div>
-              <!-- Presets Helpers -->
-              <div class="country-presets"
-                style="margin-top: 8px; font-size: 0.8rem; color: var(--color-text-muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                <span>Quick Fill:</span>
-                <button type="button" class="preset-btn active" data-code="+60"
-                  style="background: var(--color-cream-dark); border: 1px solid rgba(42,27,20,0.1); padding: 4px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.75rem; font-weight: 600; color: var(--color-brown-medium); transition: var(--transition-fast);">MY
-                  (+60)</button>
-                <button type="button" class="preset-btn" data-code="+65"
-                  style="background: var(--color-white); border: 1px solid rgba(42,27,20,0.1); padding: 4px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.75rem; font-weight: 600; color: var(--color-brown-medium); transition: var(--transition-fast);">SG
-                  (+65)</button>
-                <button type="button" class="preset-btn" data-code=""
-                  style="background: var(--color-white); border: 1px solid rgba(42,27,20,0.1); padding: 4px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.75rem; font-weight: 600; color: var(--color-brown-medium); transition: var(--transition-fast);">Others</button>
-              </div>
-            </div>
-
-            <!-- Flavours of Interest (Multi-select) -->
-            <div class="form-group">
-              <label>Flavours of Interest</label>
-              <div class="flavour-checkbox-grid">
-                <!-- Focaccias -->
-                <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Chilli Cheddar Crunch Focaccia">
-                  <span class="custom-check"></span>
-                  <span class="flavour-emoji">🌶️</span>
-                  <span class="check-label">Chilli Cheddar Crunch</span>
-                </label>
-
-                <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Rosemary Sea Salt Focaccia">
-                  <span class="custom-check"></span>
-                  <span class="flavour-emoji">🌿</span>
-                  <span class="check-label">Rosemary Sea Salt</span>
-                </label>
-                <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Roasted Garlic Focaccia">
-                  <span class="custom-check"></span>
-                  <span class="flavour-emoji">🧄</span>
-                  <span class="check-label">Roasted Garlic</span>
-                </label>
-                <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Truffle Mozzarella Focaccia">
-                  <span class="custom-check"></span>
-                  <span class="flavour-emoji">🍄</span>
-                  <span class="check-label">Truffle Mozzarella</span>
-                </label>
-
-                <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Kimchi Parmesan Focaccia">
-                  <span class="custom-check"></span>
-                  <span class="flavour-emoji">🧀</span>
-                  <span class="check-label">Kimchi Parmesan</span>
-                </label>
-
-                <!-- Loaves -->
-                <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Classic Country Loaf">
-                  <span class="custom-check"></span>
-                  <span class="flavour-emoji">🍞</span>
-                  <span class="check-label">Classic Country</span>
-                </label>
-                <label class="flavour-check-card">
-                  <input type="checkbox" name="flavours" value="Jalapeño Cheddar Loaf">
-                  <span class="custom-check"></span>
-                  <span class="flavour-emoji">🫑</span>
-                  <span class="check-label">Jalapeño Cheddar</span>
-                </label>
-
-
-              </div>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="btn-submit" id="submitBtn">
-              <span class="spinner"></span>
-              <span class="btn-text">Register Interest</span>
-            </button>
-
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SG ORDER SECTION -->
-
-  <!-- CARE GUIDE SECTION -->
-  <section class="care-guide-section" id="care-guide" style="padding: 40px 0; background-color: var(--color-main-2);">
-    <div class="container" style="text-align: center;">
-            <div class="products-header reveal" style="text-align: center; margin-bottom: 0px; max-width: 600px; margin-left: auto; margin-right: auto; padding-top: 60px;">
-        <span class="badge" style="background-color: var(--color-main-1); color: var(--color-main-2); border: none; font-size: 0.9rem; padding: 6px 16px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Instructions</span>
-        <h2 style="font-family: var(--font-heading); color: var(--color-main-1); font-size: 2.5rem; margin-top: 10px; margin-bottom: 20px;">Care Guide</h2>
-      </div>
-      <div class="game-card-container reveal" style="max-width: 600px; margin: 0 auto;">
-        <div class="game-card">
-          <img src="assets/care_card.png" alt="Focaccia Loaf Care Card" class="game-card-img" style="width:100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-          <div class="game-card-glare"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sg-order" id="sg-order" style="background-color: transparent; padding: 60px 0;">
-    <div class="container" style="max-width: 700px; margin: 0 auto; text-align: center;">
-      
-      <div class="sg-order-card reveal" style="background: var(--color-cream); border-radius: var(--radius-lg); padding: 50px 30px; box-shadow: 0 4px 20px rgba(42, 27, 20, 0.05); border: 1px solid rgba(42, 27, 20, 0.08);">
-        <h2 style="font-family: var(--font-heading); color: var(--color-brown-medium); font-size: 2rem; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 10px;">
-          Singapore Orders 
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24" width="26" height="18" style="border-radius: 2px;">
-            <rect width="36" height="12" fill="#ed2939"/>
-            <rect y="12" width="36" height="12" fill="#fff"/>
-            <circle cx="10" cy="6" r="4.5" fill="#fff"/>
-            <circle cx="11.5" cy="6" r="4.5" fill="#ed2939"/>
-            <g fill="#fff">
-              <polygon points="12,2.5 12.3,3.4 13.2,3.4 12.5,4 12.7,4.9 12,4.4 11.3,4.9 11.5,4 10.8,3.4 11.7,3.4"/>
-              <polygon points="14,3.5 14.3,4.4 15.2,4.4 14.5,5 14.7,5.9 14,5.4 13.3,5.9 13.5,5 12.8,4.4 13.7,4.4"/>
-              <polygon points="14.5,6 14.8,6.9 15.7,6.9 15,7.5 15.2,8.4 14.5,7.9 13.8,8.4 14,7.5 13.3,6.9 14.2,6.9"/>
-              <polygon points="12,7.5 12.3,8.4 13.2,8.4 12.5,9 12.7,9.9 12,9.4 11.3,9.9 11.5,9 10.8,8.4 11.7,8.4"/>
-              <polygon points="10,5.5 10.3,6.4 11.2,6.4 10.5,7 10.7,7.9 10,7.4 9.3,7.9 9.5,7 8.8,6.4 9.7,6.4"/>
-            </g>
-          </svg>
-        </h2>
-        <p style="color: var(--color-brown-medium); margin-bottom: 30px; font-size: 1.05rem; line-height: 1.6;">
-          For our customers in Singapore, we continue to fulfill orders via our dedicated storefront. 
-          Tap below to browse our current menu and place your sourdough orders seamlessly.
-        </p>
-        <a href="https://order.thequietcrumbs.com/" class="sg-order-btn" target="_blank" rel="noopener noreferrer">
-          <span>Order Now</span>
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+<div class="about-stats">
+<div class="stat-item">
+<span class="stat-number">72h</span>
+<span class="stat-label">Slow Fermentation</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">100%</span>
+<span class="stat-label">Natural Starter</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">Limited</span>
+<span class="stat-label">Batches Made-to-Order</span>
+</div>
+</div>
+</div>
+<div class="about-image-container reveal">
+<div class="carousel-container" style="position: relative;">
+<button aria-label="Previous" class="carousel-btn prev-btn" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: transparent; border: none; border-radius: 50%; outline: none; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); z-index: 10; transition: all 0.3s; opacity: 0.6;"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg></button>
+<div class="about-image-carousel custom-scrollbar" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; border-radius: 12px; padding-bottom: 8px; cursor: grab;">
+<img alt="Our Story 1" draggable="false" src="assets/our-story-1.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+<img alt="Our Story 2" draggable="false" src="assets/our-story-2.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+<img alt="Our Story 3" draggable="false" src="assets/our-story-3.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+<img alt="Our Story 4" draggable="false" src="assets/our-story-4.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+</div>
+<button aria-label="Next" class="carousel-btn next-btn" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: transparent; border: none; border-radius: 50%; outline: none; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); z-index: 10; transition: all 0.3s; opacity: 0.6;"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button>
+</div>
+</div></div>
+</div>
+</section>
+<!-- PRODUCTS SECTION -->
+<section class="products" id="products">
+<div class="container">
+<div class="products-header reveal" style="text-align: center; margin-bottom: 30px;">
+<span class="badge" style="background-color: var(--color-main-1); color: var(--color-main-2); border: none;">Our Specialties</span>
+</div>
+<!-- TAB: SOURDOUGH FOCACCIA -->
+<div id="section-focaccia">
+<h3 class="reveal" style="font-family: var(--font-heading); color: var(--color-main-1); font-size: 2.2rem; text-align: center; margin-bottom: 15px;">Sourdough Focaccia</h3>
+<p class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto 40px auto; color: var(--color-main-1); opacity: 0.9; line-height: 1.6;">Thick slabs of airy, pillowy dough bathed in olive oil, lovingly dimpled by hand and baked to a deep golden crisp. Select from our signature specialty flavours:</p>
+<div class="products-grid" style="margin-bottom: 80px;">
+<div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-main-1); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
+<div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
+<img alt="Chilli Cheddar Crunch" src="assets/flavour_chilli_cheddar.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"/>
+</div>
+<div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+<h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-main-2); font-size: 1.25rem; margin-bottom: 12px;">Chilli Cheddar Crunch</h3>
+<p style="flex-grow: 1; color: var(--color-main-2); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Crowd favourite. A richly indulgent mosaic of melted aged cheddar cheese with the popular Lao Gan Ma chilli sauce.</p>
+</div>
+</div>
+<div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-main-1); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
+<div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
+<img alt="Rosemary Sea Salt" src="assets/flavour_rosemary_sea_salt.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"/>
+</div>
+<div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+<h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-main-2); font-size: 1.25rem; margin-bottom: 12px;">Rosemary Sea Salt</h3>
+<p style="flex-grow: 1; color: var(--color-main-2); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Our Queen of classics, generously drizzled with premium, rosemary-infused olive oil and sprinkled with fresh rosemary and smoked sea salt flakes. For the days when simplicity is the ultimate sophistication.</p>
+</div>
+</div>
+<div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-main-1); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
+<div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
+<img alt="Smoked Garlic" src="assets/flavour_smoked_garlic.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"/>
+</div>
+<div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+<h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-main-2); font-size: 1.25rem; margin-bottom: 12px;">Smoked Garlic</h3>
+<p style="flex-grow: 1; color: var(--color-main-2); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Fragrant, caramelised, melt-in-the-mouth smoked and roasted garlic. You either love it or you don’t. In our experience, it’s almost always the former.</p>
+</div>
+</div>
+<div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-main-1); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
+<div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
+<img alt="Truffle Mozzarella" src="assets/flavour_truffle_mozzarella.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"/>
+</div>
+<div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+<h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-main-2); font-size: 1.25rem; margin-bottom: 12px;">Truffle Mozzarella</h3>
+<p style="flex-grow: 1; color: var(--color-main-2); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Indulgent mozzarella melted over dimpled pockets of aromatic, luxurious Italian truffle paste. Complex, umami, intense.</p>
+</div>
+</div>
+<div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-main-1); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
+<div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
+<img alt="Kimchi Parmesan" src="assets/flavour_kimchi_parmesan.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"/>
+</div>
+<div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+<h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-main-2); font-size: 1.25rem; margin-bottom: 12px;">Kimchi Parmesan</h3>
+<p style="flex-grow: 1; color: var(--color-main-2); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Slow-fermented Italian dough meets classic fermented Korean kimchi - it’s a match made in bread heaven. Infused with a rich, spicy Gochujang (Korean chili) glaze, aromatic slices of garlic and pockets of tangy kimchi, baked to a deep crunch with a golden parmesan crust. Savoury, spicy, utterly tangy and completely addictive.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB: SOURDOUGH LOAVES -->
+<div id="section-loaves" style="margin-top: 60px;">
+<h3 class="reveal" style="font-family: var(--font-heading); color: var(--color-main-1); font-size: 2.2rem; text-align: center; margin-bottom: 15px;">Sourdough Loaves</h3>
+<p class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto 40px auto; color: var(--color-main-1); opacity: 0.9; line-height: 1.6;">Rustic, naturally leavened sourdough loaves baked to perfection with a blistered, crackly crust and an open, chewy crumb.</p>
+<div class="products-grid" style="margin-bottom: 80px;">
+<div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-main-1); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
+<div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
+<img alt="Classic Country Loaf" src="assets/flavour_classic_country.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"/>
+</div>
+<div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+<h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-main-2); font-size: 1.25rem; margin-bottom: 12px;">Classic Country Loaf</h3>
+<p style="flex-grow: 1; color: var(--color-main-2); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Blistered, chewy crust and a remarkably tender, open crumb with a gentle sourdough tang. It doesn't get simpler than this.</p>
+</div>
+</div>
+<div class="product-card reveal" style="display: flex; flex-direction: column; overflow: hidden; background: var(--color-main-1); border-radius: var(--radius-lg); box-shadow: 0 4px 15px rgba(42, 27, 20, 0.05); transition: var(--transition-normal); border: 1px solid rgba(42, 27, 20, 0.05);">
+<div class="product-card-image" style="width: 100%; padding-top: 56.25%; position: relative;">
+<img alt="Jalapeño Cheddar Loaf" src="assets/flavour_jalapeno_cheddar.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"/>
+</div>
+<div class="product-card-body" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+<h3 style="margin-top: 0; font-family: var(--font-heading); color: var(--color-main-2); font-size: 1.25rem; margin-bottom: 12px;">Jalapeño Cheddar Loaf</h3>
+<p style="flex-grow: 1; color: var(--color-main-2); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">A spicy crowd favorite. Bright slices of jalapeño peppers nestled alongside pockets of rich cheddar cheese melted inside and out.</p>
+</div>
+</div>
+</div>
+<div style="display: flex; gap: 16px; justify-content: center;  flex-wrap: wrap; margin-bottom: 40px; margin-top: 40px;">
+<a href="https://ordermy.thequietcrumbs.com" rel="noopener noreferrer" style="background-color: #FFFDF0; color: #3D4524; padding: 12px 24px; border-radius: 99px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #3D4524; display: flex; align-items: center; gap: 8px;" target="_blank">
+          Damansara Pre-order 🇲🇾
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <h3>the quiet crumbs</h3>
-          <p>Slow bakes, warm crusts, and simple ingredients.</p>
-        </div>
-        <div class="footer-links">
-          <a href="#care-guide" class="footer-link-item" aria-label="Care Guide">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-          </a>
-          <a href="https://order.thequietcrumbs.com/" class="footer-link-item" target="_blank" rel="noopener noreferrer" aria-label="Order Now">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-            </svg>
-          </a>
-          <a href="https://www.instagram.com/thequietcrumbs/" class="footer-link-item" target="_blank"
-            rel="noopener noreferrer" aria-label="Follow us on Instagram">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <p>&copy; 2026 The Quiet Crumbs. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ----------------------------------------------------
+<a href="https://order.thequietcrumbs.com" rel="noopener noreferrer" style="background-color: #3D4524; color: #FFFDF0; padding: 12px 24px; border-radius: 99px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 8px;" target="_blank">
+          Singapore Pre-order 🇸🇬
+        </a>
+</div></div>
+</section>
+<!-- INTEREST / PRE-ORDER FORM SECTION -->
+<!-- SG ORDER SECTION -->
+<!-- PREORDER SECTION -->
+<section class="carousel-section" id="carousel-section" style="padding: 60px 0; background-color: var(--color-main-2); background-image: url('assets/TQC_Pattern_v2.0_Dark.png'); background-size: cover; background-position: center;"><div class="container"><div style="max-width: 666px; margin: 0 auto;"><div class="about-image-container reveal">
+<div class="carousel-container" style="position: relative;">
+<button aria-label="Previous" class="carousel-btn prev-btn" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: transparent; border: none; border-radius: 50%; outline: none; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); z-index: 10; transition: all 0.3s; opacity: 0.6;"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg></button>
+<div class="about-image-carousel custom-scrollbar" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; border-radius: 12px; padding-bottom: 8px; cursor: grab;">
+<img alt="Carousel 1" draggable="false" src="assets/carousel-1.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+<img alt="Carousel 2" draggable="false" src="assets/carousel-2.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+<img alt="Carousel 3" draggable="false" src="assets/carousel-3.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+<img alt="Carousel 4" draggable="false" src="assets/carousel-4.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+<img alt="Carousel 5" draggable="false" src="assets/carousel-5.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+<img alt="Carousel 6" draggable="false" src="assets/carousel-6.jpg" style="scroll-snap-align: center; width: 100%; object-fit: cover; border-radius: 12px; flex-shrink: 0;"/>
+</div>
+<button aria-label="Next" class="carousel-btn next-btn" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: transparent; border: none; border-radius: 50%; outline: none; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); z-index: 10; transition: all 0.3s; opacity: 0.6;"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button>
+</div>
+</div></div></div></section>
+<!-- CARE GUIDE SECTION -->
+<section class="care-guide-section" id="care-guide" style="padding: 40px 0; background-color: var(--color-main-2);">
+<div class="container" style="text-align: center;">
+<div class="products-header reveal" style="text-align: center; margin-bottom: 0px; max-width: 600px; margin-left: auto; margin-right: auto; padding-top: 60px;">
+<span class="badge" style="background-color: var(--color-main-1); color: var(--color-main-2); border: none; font-size: 0.9rem; padding: 6px 16px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Instructions</span>
+<h2 style="font-family: var(--font-heading); color: var(--color-main-1); font-size: 2.5rem; margin-top: 10px; margin-bottom: 0px;">Care Guide</h2>
+</div>
+<div class="game-card-container reveal" style="max-width: 600px; margin: 0 auto;">
+<div class="game-card">
+<img alt="Focaccia Loaf Care Card" class="game-card-img" src="assets/care_card.png" style="width:100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"/>
+<div class="game-card-glare"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-logo">
+<h3>the quiet crumbs</h3>
+<p>Slow bakes, warm crusts, and simple ingredients.</p>
+</div>
+<div class="footer-links">
+<a aria-label="Care Guide" class="footer-link-item" href="#care-guide">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+</svg>
+</a>
+<a aria-label="Order SG" class="footer-link-item" href="https://take.app/thequietcrumbs" rel="noopener noreferrer" style="position: relative; background-color: var(--color-main-2); color: var(--color-main-1);" target="_blank">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style=" stroke: var(--color-main-1);" viewbox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+<span style="position:absolute;top:-4px;right:-4px;font-size:0.8rem;background:white;border-radius:999px;padding:0px 2px;box-shadow:0 1px 3px rgba(0,0,0,0.1);line-height:1;">🇸🇬</span>
+</a><a aria-label="Order MY" class="footer-link-item" href="https://ordermy.thequietcrumbs.com" rel="noopener noreferrer" style="position: relative;" target="_blank">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+<span style="position:absolute;top:-4px;right:-4px;font-size:0.8rem;background:white;border-radius:999px;padding:0px 2px;box-shadow:0 1px 3px rgba(0,0,0,0.1);line-height:1;">🇲🇾</span>
+</a><a aria-label="Follow us on Instagram" class="footer-link-item" href="https://www.instagram.com/thequietcrumbs/" rel="noopener noreferrer" style="background-color: var(--color-main-2); color: var(--color-main-1);" target="_blank">
+<svg style=" color: var(--color-main-1);" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="footer-copyright">
+<p>© 2026 The Quiet Crumbs. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- ----------------------------------------------------
        JAVASCRIPT / INTERACTIVE CONTROLS
        ---------------------------------------------------- -->
-  <script>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
 
       // ----------------------------------------------------
@@ -878,7 +559,80 @@
       }
     });
   </script>
+<script>
+  // Carousel functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const carouselContainers = document.querySelectorAll('.carousel-container');
 
+    carouselContainers.forEach(container => {
+      const carousel = container.querySelector('.about-image-carousel');
+      const prevBtn = container.querySelector('.prev-btn');
+      const nextBtn = container.querySelector('.next-btn');
+
+      if (carousel) {
+        // Endless loop logic on button clicks
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            if (carousel.scrollLeft <= 10) {
+              carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'smooth' });
+            } else {
+              carousel.scrollBy({ left: -carousel.offsetWidth, behavior: 'smooth' });
+            }
+          });
+        }
+        
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            if (Math.ceil(carousel.scrollLeft + carousel.clientWidth) >= carousel.scrollWidth - 10) {
+              carousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+              carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
+            }
+          });
+        }
+
+        // Auto-play logic (every 5 seconds)
+        let autoPlayInterval = setInterval(() => {
+          if (nextBtn) nextBtn.click();
+        }, 5000);
+
+        // Pause auto-play on hover/interaction
+        container.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+        container.addEventListener('mouseleave', () => {
+          autoPlayInterval = setInterval(() => {
+            if (nextBtn) nextBtn.click();
+          }, 5000);
+        });
+
+        // Mouse drag to scroll
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('mousedown', (e) => {
+          isDown = true;
+          carousel.style.cursor = 'grabbing';
+          startX = e.pageX - carousel.offsetLeft;
+          scrollLeft = carousel.scrollLeft;
+        });
+        carousel.addEventListener('mouseleave', () => {
+          isDown = false;
+          carousel.style.cursor = 'grab';
+        });
+        carousel.addEventListener('mouseup', () => {
+          isDown = false;
+          carousel.style.cursor = 'grab';
+        });
+        carousel.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - carousel.offsetLeft;
+          const walk = (x - startX) * 2; // Scroll-fast multiplier
+          carousel.scrollLeft = scrollLeft - walk;
+        });
+      }
+    });
+  });
+</script>
 </body>
-
 </html>
