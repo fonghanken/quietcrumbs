@@ -1644,9 +1644,10 @@
         padding: 12px 20px !important;
       }
 
-      /* Products grid: single column */
+      /* Products grid: single column, centered (not stretched to full width) */
       .products-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: minmax(0, 420px) !important;
+        justify-content: center !important;
       }
       /* Tabs */
       .products-tabs {
@@ -1670,8 +1671,9 @@
       .about-grid {
         grid-template-columns: 1fr;
       }
+      /* Keep about-image-container visible on mobile for carousel */
       .about-image-container {
-        display: none;
+        display: block;
       }
 
       /* Damansara / Interest form */

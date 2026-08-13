@@ -604,7 +604,7 @@
           }, 5000);
         });
 
-        // Mouse drag to scroll
+        // Mouse drag to scroll (desktop)
         let isDown = false;
         let startX;
         let scrollLeft;
@@ -630,6 +630,36 @@
           const walk = (x - startX) * 2; // Scroll-fast multiplier
           carousel.scrollLeft = scrollLeft - walk;
         });
+
+        // Touch swipe support (mobile)
+        let touchStartX = 0;
+        let touchScrollLeft = 0;
+        let isTouchDragging = false;
+
+        carousel.addEventListener('touchstart', (e) => {
+          touchStartX = e.touches[0].clientX;
+          touchScrollLeft = carousel.scrollLeft;
+          isTouchDragging = true;
+          clearInterval(autoPlayInterval); // pause auto-play on touch
+        }, { passive: true });
+
+        carousel.addEventListener('touchmove', (e) => {
+          if (!isTouchDragging) return;
+          const dx = touchStartX - e.touches[0].clientX;
+          carousel.scrollLeft = touchScrollLeft + dx;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', () => {
+          isTouchDragging = false;
+          // Snap to nearest image after swipe
+          const imageWidth = carousel.offsetWidth;
+          const targetIndex = Math.round(carousel.scrollLeft / imageWidth);
+          carousel.scrollTo({ left: targetIndex * imageWidth, behavior: 'smooth' });
+          // Resume auto-play
+          autoPlayInterval = setInterval(() => {
+            if (nextBtn) nextBtn.click();
+          }, 5000);
+        }, { passive: true });
       }
     });
   });
