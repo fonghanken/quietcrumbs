@@ -1671,9 +1671,13 @@
       .about-grid {
         grid-template-columns: 1fr;
       }
-      /* Keep about-image-container visible on mobile for carousel */
-      .about-image-container {
+      /* Keep about-image-container visible on mobile inside carousel-section */
+      #carousel-section .about-image-container {
         display: block;
+      }
+      /* Keep about-section carousel hidden on mobile (layout is 1-col text-only) */
+      .about-grid .about-image-container {
+        display: none;
       }
 
       /* Damansara / Interest form */
